@@ -3,6 +3,7 @@
 ## Description
 
 This website is my personal portfolio which includes my portfolio as a software engineer and my portfolio as a sound artist. The purpose is to give a visual representation of my resume and previous work in both fields. It also gives the user the possibility to send me messages.
+The website is accessible at the domain: www.marcleerink.com
 
 ## Getting Started
 
