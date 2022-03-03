@@ -16,9 +16,9 @@ To excecute you need no special requirements except for any standard OS (Windows
 There is no installation required to run this promgram. 
 Please run the index.html file to start.
 
-## Help
+## Issues/Help
 
-This is the first version of this program. There are currently no known common issues known.
+This is the first version of this program. The contact form is not yet functioning correctly.
 Please contact the author for help.
 
 ## Authors
@@ -28,5 +28,5 @@ Marc Leerink (marc.leerink@code.berlin)
 
 ## Version History
 
-Version 1: Launch of the draft including 3 pages.
+Version 1: Launch of the draft including 3 pages for small screens
 

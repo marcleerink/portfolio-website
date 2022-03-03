@@ -1,0 +1,136 @@
+@font-face {
+    font-family: raleway;
+    src: url(content/font/Raleway-VariableFont_wght.ttf);
+  }
+  html {
+    box-sizing: border-box;
+    background-color: white;
+  }
+  h1 {
+      font-family: raleway, Helvetica, sans-serif;
+      font-size: min(10vw, 60px);
+      text-align: center;
+      color: black;
+      margin: 0;
+    }
+  h2 {
+      font-family: raleway, Helvetica, sans-serif;
+      font-size: min(5vw, 20px);
+      text-align: center;
+      color: black;
+      margin: 0;
+  }
+  p {
+      margin: auto;
+      font-family: raleway, Helvetica, sans-serif;
+      font-size: min(4vw, 12px);
+      font-weight: lighter;
+      color: black;
+      text-align: center;
+    }
+  
+  .header {
+      margin-bottom: 16px;
+      box-sizing: inherit;
+  }
+  .image {
+      display: block;
+      width: 90%;
+      height: 30%;
+      box-sizing: inherit;
+      margin: auto;
+      object-fit:scale-down;
+  }
+  .body {
+      margin: auto;
+      width: 70%;
+      box-sizing: inherit;
+      text-align: center;
+  }
+  .links {
+      margin: auto;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    
+  }
+  /* .button {
+    padding: 16px;
+    margin: 16px;
+    border-color: #727272;
+    background-color:rgb(255, 243, 210);
+    border-width: 1px;
+    width: 10vw;
+    border-radius: 10px;
+    font-size: 12px;
+    text-align: center; */
+    
+  }
+  
+  
+  
+  .footer {
+      margin: 0;
+      box-sizing: inherit;
+  }
+  
+  .form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 400px;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    font-family: raleway, Helvetica, sans-serif;
+    font-size: min(4vw, 20px);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  form li + li {
+    margin-top: 1em;
+  }
+  
+  label {
+    display: inline-flex;
+    width: 90px;
+    text-align: right;
+  }
+  
+  input,textarea {
+    font-family: raleway, Helvetica, sans-serif;
+    font-size: min(4vw, 20px);
+    width: 70%;
+    box-sizing: border-box;
+    border: 1px solid #999;
+  }
+  
+  input:focus,textarea:focus {
+    border-color: #000;
+  }
+  
+  textarea {
+    vertical-align: top;
+    height: 5em;
+  }
+  
+  .button {
+    padding-left: 90px;
+    
+  }
+  
+  button {
+    margin-left: .5em;
+    font-family: raleway, Helvetica, sans-serif;
+    font-size: min(4vw, 20px);
+  }
+  
+  @media (min-height: 499px) {
+  
+  }

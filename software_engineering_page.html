@@ -7,23 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
   </head>
+  
   <body>
-    <div class="header">
+    <section class="header">
       <h1>Marc Leerink</h1>
       <h2>Software Engineer</h2>
-    </div>
-    <div class="body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+    </section>
+    <div class="wrap">
+      <img class="image" src="images/cvphoto-edit.png" alt="Portrait Photo">
+    </div> 
+    <section class="body">
+      
+      <p> Software engineering student at CODE University, currently looking for a working student position to complement my learning journey.
       </p>
-    <div class="links">
-      <p><br><a href="index.html"> Home</a>
-      <br><a href="sound_artist_page.html">Sound Artist</a>
-      <br><a href="contact_form.html">Contact Form</a>
+      <p> My learning objectives are in the direction of Front-End Development, Web Development, Responsive Design and Practical Algorithms. 
       </p>
-    </div>
-    </div>
-    <div class="footer">
-      <h2>Contact:<br><a href="mailto: marc.leerink@code.berlin"> marc.leerink@code.berlin</a></h2>
-    </div>
+      <h2><br>Tech stack</h2>
+      <p>.html
+        <br>.css
+        <br>.py
+      </p>
+
+      <form class="links">
+        <button class="button button2" onclick=" window.open('content/cv.pdf','_blank')"><a>CV</a></button>
+        <button class="button button2" onclick=" window.open('https://github.com/marcleerink','_blank')"><a>Github</a></button>
+        <div class="links2">
+          <button class= "button" formaction="#"> <a>Projects</a></button>
+          <button class= "button" formaction="index.html"><a>Overview</a></button>
+        </div>
+      </form>
+    </section>
   </body>
 </html>
