@@ -19,9 +19,9 @@ h2 {
     text-align: center;
     color: black;
     margin: 0;
+    padding: 0;
 }
 p {
-    margin: auto;
     max-width: 80%;
     font-family: raleway, Helvetica, sans-serif;
     font-size: min(4vw, 16px);
@@ -39,68 +39,54 @@ a {
   text-align: center;
   }
 
+
 .header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    box-sizing: inherit;
 }
 
 .wrap {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 16px;
-  margin-bottom: 16px;
 }
 
  .image {
   max-width: 100%;
-  height: auto;
   box-sizing: inherit;
-  
 }
 
 .body {
     display: flex;
+    
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-}
-.links {
-    margin: 16px;
-    width: 90%;
-    text-align: center;
-}
-.links2{
-  width: 90%;
-  margin: 16px;
-  text-align: center;
+    height: 100%;
+
 }
 .button {
-
   padding: 12px;
   margin: 12px;
-  border-color: #727272;
   background-color:rgb(255, 243, 210);
-  border-width: 1px;
+  border: 1px solid #727272;
   width: 40vw;
   max-width: 200px;
   border-radius: 5px;
   font-size: 12px;
   text-align: center;
   cursor: pointer;
-  
+  font-family: raleway, Helvetica, sans-serif;
+  font-size: min(4vw, 16px);
+  font-weight: lighter;
+  color: black;
+  text-align: center;
+  text-decoration: none;
 }
 .button2 {
   width: 17vw;
   margin: 12px;
-}
-
-.button3 {
-  text-align: center;
-  float: center;
 }
 .button:hover{
   transform: scale(1.1);
@@ -112,18 +98,59 @@ a {
     float: left;
   }
   h1 {
-    text-align: left;
+    text-align: center;
     }
   h2 {
-    text-align: left;
+    text-align: center;
     padding-left: min(4vw, 16px) ;
   }
   .body {
     width: fit-content;
 
   }
-  .links {
-    float: center;
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%
   }
-  p m
+  .links {
+    display:none;
+  }
+  .links2 {
+    display:flex;
+  }
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+  .navbar {
+    display: none;
+  }
+  .links {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin: 16px;
+    width: 90%;
+    text-align: center;
+  }
+  .links2{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 16px;
+    text-align: center;
+  }
+  .containlinks {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+  }
 }

@@ -6,13 +6,20 @@
     <meta name="keywords" content="Software Engineer, Coding, HTML, CSS, Python, Sound Artist, DJ, Music Producer ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   
   <body>
     <section class="header">
       <h1>Marc Leerink</h1>
       <h2>Software Engineer</h2>
+      <nav class="navbar">
+        <a class= "button" href="index.html">Overview</a>
+        <a class= "button" href="sound_artist_page.html">Sound Artist</a>
+        <a class= "button" href="#">Contact Form</a>
+      </nav>
     </section>
+    <div class="container">
     <div class="wrap">
       <img class="image" src="images/cvphoto-edit.png" alt="Portrait Photo">
     </div> 
@@ -27,15 +34,19 @@
         <br>.css
         <br>.py
       </p>
-
-      <form class="links">
-        <button class="button button2" onclick=" window.open('content/cv.pdf','_blank')"><a>CV</a></button>
-        <button class="button button2" onclick=" window.open('https://github.com/marcleerink','_blank')"><a>Github</a></button>
+      <div class="containlinks">
         <div class="links2">
-          <button class= "button" formaction="#"> <a>Projects</a></button>
-          <button class= "button" formaction="index.html"><a>Overview</a></button>
+          <a class="button button2" onclick=" window.open('content/cv.pdf','_blank')">CV</a>
+          <a class="button button2" onclick=" window.open('https://github.com/marcleerink','_blank')"><i class="fa-brands fa-github"></i> </a>
+          <a onclick=" window.open('https://www.linkedin.com/in/marc-leerink-82b83b121/','_blank')" class="button button2"><i class="fa-brands fa-linkedin"></i></a>
+        </div>  
+        <div class="links">
+          <a class= "button" href="#"> Projects</a>
+          <a class= "button" href="index.html">Overview</a>
         </div>
-      </form>
+      </div>
     </section>
+  
+  </div>
   </body>
 </html>
