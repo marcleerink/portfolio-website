@@ -8,9 +8,11 @@ The website is accessible at the domain: www.marcleerink.com
 ## Getting Started
 
 Please run the index.html file to start.
+
 ### Dependencies
 
 To excecute you need no special requirements except for any standard OS (Windows, MAC, Linux)
+
 ### Installing
 
 There is no installation required to run this promgram. 
@@ -29,4 +31,9 @@ Marc Leerink (marc.leerink@code.berlin)
 ## Version History
 
 Version 1: Launch of the draft including 3 pages for small screens
+Version 2: Made responsive and added a navbar
 
+## To do
+make font off links heavier
+set width for links to be 90% for mobile
+set headlines back
