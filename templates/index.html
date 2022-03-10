@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Marc Leerink{% endblock %}
+
+{% block body %}
+  <section class="header">
+    <h1>Marc Leerink</h1>
+    <h2>Software Engineer • Sound Artist</h2>
+  </section>
+  <nav class="navbar">
+    <a class= "button" href={{url_for('software_engineer')}}>Software Engineer</a>
+    <a class= "button" href={{url_for('sound_artist')}}>Sound Artist</a>
+    <a class= "button" href="#">Contact Form</a>
+  </nav>
+  <div class="container">
+  <div class="wrap">
+    <img class="image" src="static/images/cvphoto-edit.png" alt="Portrait Photo">
+  </div> 
+  <section class="body">
+    
+    <p>Hi! I am Marc Leerink, a passionate music lover from the Netherlands living in Berlin. I am a software engineering student at CODE University and freelance sound artist. 
+    </p>
+    <p>
+    My main interests are sound and technology and I am always looking for ways to combine the two.
+    </p>
+    <div class="links">
+      <a class= "button" href="software_engineering_page.html">Software Engineer</a>
+      <a class= "button" href="sound_artist_page.html">Sound Artist</a>
+      <a class= "button" href="contact_form.html">Contact Form</a>
+    </div>
+  </section>
+  </div>
+{% endblock %}

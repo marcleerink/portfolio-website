@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Software Engineer{% endblock %}
+
+{% block body %}
+    <section class="header">
+      <h1>Marc Leerink</h1>
+      <h2>Software Engineer</h2>
+      <nav class="navbar">
+        <a class= "button" href={{url_for('index')}}>Overview</a>
+        <a class= "button" href={{url_for('sound_artist')}}>Sound Artist</a>
+        <a class= "button" href="#">Contact Form</a>
+      </nav>
+    </section>
+    <div class="container">
+    <div class="wrap">
+      <img class="image" src="static/images/cvphoto-edit.png" alt="Portrait Photo">
+    </div> 
+    <section class="body">
+      
+      <p> Software engineering student at CODE University, currently looking for a working student position to complement my learning journey. 
+      <br> <br> My learning objectives are in the direction of Front-End Development, Web Development, Responsive Design and Practical Algorithms. 
+      </p>
+      <h2><br>Tech stack</h2>
+      <p>.html
+        <br>.css
+        <br>.py
+      </p>
+      <div class="projects_container">
+          <h2>Projects</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi scelerisque magna quis urna ultrices sodales. Donec rutrum nisl ac venenatis tempus. Donec molestie bibendum mauris, id luctus lacus consequat sit amet. Morbi facilisis luctus sem, et luctus est consectetur egestas. Nulla sed porttitor leo. Duis blandit odio vel arcu vehicula rutrum. Proin vitae leo a dui venenatis volutpat non at velit. Sed pulvinar elit eget dapibus dictum.
+        </p>
+      </div>
+      <div class="containlinks">
+        <div class="links2">
+          <a class="button button2" onclick=" window.open('content/cv.pdf','_blank')">CV</a>
+          <a class="button button2" onclick=" window.open('https://github.com/marcleerink','_blank')"><i class="fa-brands fa-github"></i> </a>
+          <a onclick=" window.open('https://www.linkedin.com/in/marc-leerink-82b83b121/','_blank')" class="button button2"><i class="fa-brands fa-linkedin"></i></a>
+        </div>  
+        <div class="links">
+          <a class= "button" href="#"> Projects</a>
+          <a class= "button" href="index.html">Overview</a>
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock %}
