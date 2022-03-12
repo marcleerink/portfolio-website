@@ -39,7 +39,6 @@ a {
 
 
 .header {
-    margin:;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -119,7 +118,9 @@ a {
     padding: 12px;
     margin: 12px;
 }
-
+.red {
+    color: red;
+}
 @media (min-width: 1000px) {
   .wrap {
     max-width: 40%;
@@ -163,6 +164,7 @@ a {
     }
   .container {
     flex-direction: column;
+    flex-wrap: wrap;
   }
   .navbar {
     display: none;
@@ -172,6 +174,8 @@ a {
     justify-content: center;
     margin: 16px;
     text-align: center;
+    flex-wrap: wrap;
+    
   }
   .links2{
     display: flex;

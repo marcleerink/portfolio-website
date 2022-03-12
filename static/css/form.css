@@ -1,6 +1,6 @@
 @font-face {
     font-family: raleway;
-    src: url(content/font/Raleway-VariableFont_wght.ttf);
+    src: url(static/font/Raleway-VariableFont_wght.ttf);
   }
   html {
     box-sizing: border-box;

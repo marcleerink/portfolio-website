@@ -11,35 +11,25 @@
     <a class= "button" href={{url_for('index')}}>Overview</a>
     <a class= "button" href={{url_for('software_engineer')}}>Software Engineer</a>
     <a class= "button" href={{url_for('sound_artist')}}>Sound Artist</a>
+    <a class= "button" href="#">Contact Form</a>
   </nav>
   <div class="container">
   <div class="wrap">
     <img class="image" src="static/images/cvphoto-edit.png" alt="Portrait Photo">
   </div> 
   <section class="body">
-    <form class="form" action="messages" method="post">
-        <ul>
-         <li>
-           <label for="name">Name:</label>
-           <input type="text" id="name" name="name">
-         </li>
-         <li>
-           <label for="mail">E-mail:</label>
-           <input type="email" id="mail" name="_replyto">
-         </li>
-         <li>
-            <label for="subject">Subject</label>
-            <input type="subject" id="subject" name="Subject">
-          </li>
-         <li>
-           <label for="msg">Message:</label>
-           <textarea id="msg" name="message"></textarea>
-         </li>
-         <li class="button3">
-            <button type="submit">Send your message</button>
-          </li>
-        </ul>
-       </form>
+    <h2><br> To Do List</h2>
+    <p>
+        {% for slug, todo in todo.items() %}
+            <li>
+                {% if todo['priority'] == 'High'%}
+                    <a class ="red" href="/{{todo['url']}}">{{ todo['page'] }}</a>
+                {% else %}
+                    <a href="/{{todo['url']}}">{{ todo['page'] }}</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </p>
     
     <div class="links">
         <a class= "button" href={{url_for('index')}}>Overview</a>

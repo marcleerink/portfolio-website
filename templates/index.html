@@ -10,7 +10,7 @@
   <nav class="navbar">
     <a class= "button" href={{url_for('software_engineer')}}>Software Engineer</a>
     <a class= "button" href={{url_for('sound_artist')}}>Sound Artist</a>
-    <a class= "button" href="#">Contact Form</a>
+    <a class= "button" href={{url_for('contact')}}>Contact Form</a>
   </nav>
   <div class="container">
   <div class="wrap">
@@ -24,10 +24,13 @@
     My main interests are sound and technology and I am always looking for ways to combine the two.
     </p>
     <div class="links">
-      <a class= "button" href="software_engineering_page.html">Software Engineer</a>
-      <a class= "button" href="sound_artist_page.html">Sound Artist</a>
-      <a class= "button" href="contact_form.html">Contact Form</a>
+      <a class= "button" href={{url_for('software_engineer')}}>Software Engineer</a>
+      <a class= "button" href={{url_for('sound_artist')}}>Sound Artist</a>
+      <a class= "button" href={{url_for('contact')}}>Contact Form</a>
     </div>
+    <div class="links2">
+        <a class= "button" href={{url_for('todo')}}>To Do</a>
+      </div>
   </section>
   </div>
 {% endblock %}

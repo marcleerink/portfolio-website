@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Sound_artist{% endblock %}
+{% block title %}Marc Leerink - Sound_artist{% endblock %}
 
 {% block body %}
     <section class="header">
@@ -10,7 +10,7 @@
     <nav class="navbar">
         <a class= "button" href={{url_for('index')}}>Overview</a>
         <a class= "button" href={{url_for('software_engineer')}}>Software Engineer</a>
-        <a class= "button" href="#">Contact Form</a>
+        <a class= "button" href={{url_for('contact')}}>Contact Form</a>
     </nav>
     <div class="wrap">
       <img class="image" src="static/images/cvphoto-edit.png" alt="Portrait Photo">
@@ -27,7 +27,7 @@
         <a onclick=" window.open('https://bandcamp.com/maleerink','_blank')" class="button button2"><i class="fa-brands fa-bandcamp"></i></a>
       </div>
       <div class="links">
-        <a class= "button" href="index.html">Overview</a>
+        <a class= "button" href={{url_for('index')}}>Overview</a>
       </div>
     </section>
 {% endblock %}
