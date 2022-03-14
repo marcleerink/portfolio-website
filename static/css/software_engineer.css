@@ -1,0 +1,36 @@
+.se_logo_wrap {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+
+}
+.se_logo {
+    overflow: hidden;
+}
+.out_links {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin: 12px;
+}
+
+.out_button {
+    padding: 16px;
+    margin:16px;
+    font-size: min(10vw, 24px);
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(255, 243, 210); 
+    border-radius: 20px;
+    width: max(10vw, 24px);
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+}

@@ -1,0 +1,201 @@
+@font-face {
+    font-family: raleway;
+    src: url(../font/Raleway-VariableFont_wght.ttf);
+}
+html, body {
+    height: 100%; 
+    box-sizing: border-box;
+}
+h1 {
+    font-family: raleway, Helvetica, sans-serif;
+    font-size: min(10vw, 60px);
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+  }
+h2 {
+    font-family: raleway, Helvetica, sans-serif;
+    font-size: min(5vw, 20px);
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    padding: 0;
+  }
+
+p {
+    max-width: 80%;
+    font-family: raleway, Helvetica, sans-serif;
+    font-size: min(4vw, 16px);
+    color: black;
+    font-weight: lighter;
+    text-align: center;
+}
+a {
+    font-family: raleway, Helvetica, sans-serif;
+    font-size: min(4vw, 16px);
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    font-style: normal;
+}
+.header {
+    width:100%;
+    margin:2px;
+    object-position: center;
+
+}
+.main_background {
+    background-image: url('/static/images/cvphoto.png'); 
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    
+}
+.backgroundcontainer {
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+.background1 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    margin: 0px;
+    height: 100%;
+    overflow: hidden;
+}
+    .background1:hover {
+        background-color: rgb(255, 243, 210);
+    }
+.background2 {
+    display: flex;
+    justify-content: center;
+    justify-items: space-around;
+    align-items: space-around;
+    flex-basis:50%;
+    margin: 0px;   
+    height: 100%;
+    overflow: hidden;
+}
+    .background2:hover {
+        background-color: rgb(255, 243, 210);
+    }
+    
+
+.button {
+    justify-self: center;
+    align-self: center;
+    font-size: 10em;
+    opacity: 0.5;
+    background: 1px solid black
+
+}
+    .button:hover {
+        transform: scale(1.5);
+        opacity: 1;
+}
+
+.links {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin: 12px;
+}
+
+.button2, .out_button, .nav_button {
+    padding: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: min(10vw, 24px);
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(255, 243, 210); 
+    border-radius: 20px;
+    width: max(100vw, 24px);
+}
+.text_button, .links2, .out_links{
+    display: none;
+}
+.navbar {
+    display: none;
+}
+@media (min-width: 700px) {
+    .button2 {
+        width: max(50vw, 24px);
+}
+@media (min-width: 1100px) {
+    .backgroundcontainer {
+        flex-direction: row;
+    }
+    .text_button, .links2, .out_links {
+        display: none;
+    }
+    .background1:hover .text_button {
+        display: flex;
+        flex-flow: column nowrap;
+        align-self: center;
+    }
+    .background1:hover .button {
+        transform: translateY(-0.3em);
+    }
+
+    .background1:hover .out_links{
+        display: flex;
+        flex-flow: row, nowrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .background2, .background1{
+        align-items: center;
+        flex-flow: column nowrap;
+        align-content: center;
+
+    }
+    .background2:hover .text_button {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    .background2:hover .links2 {
+        display: flex;
+        flex-flow: row, nowrap;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .background2:hover .button {
+        transform: translateY(-0.3em);
+    }
+    .navbar {
+        display:flex;
+        width:100%;
+        justify-content: center;
+        gap:10%;
+    }
+
+    .nav_button {
+        flex-basis: 20%;
+    }
+
+    .links {
+        display:none;
+    }
+    .button2, .out_button {
+        justify-self: center;
+        align-self: center;
+        flex-basis: 33%;
+        margin-top: 10vh;
+        
+    }
+        .button2:hover, .out_button:hover {
+            transform: scale(1.5);
+        }
+}
