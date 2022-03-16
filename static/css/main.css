@@ -95,10 +95,11 @@ a {
     background: 1px solid black
 
 }
-    .button:hover {
+    .button:hover, .button:active {
         transform: scale(1.5);
         opacity: 1;
-}
+        transition: all 500ms ease;
+} 
 
 .links {
     display: flex;
@@ -119,18 +120,25 @@ a {
     background-color: rgb(255, 243, 210); 
     border-radius: 20px;
     width: max(100vw, 24px);
+    opacity: 0.8;
 }
+    .button2:hover, .button2:active {
+        transform: scale(1.1);
+        opacity: 1;
+        transition: all 500ms ease;
+}
+
 .text_button, .links2, .out_links{
     display: none;
 }
 .navbar {
     display: none;
 }
-@media (min-width: 700px) {
+@media (min-width: 500px) {
     .button2 {
         width: max(50vw, 24px);
 }
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
     .backgroundcontainer {
         flex-direction: row;
     }
@@ -141,9 +149,12 @@ a {
         display: flex;
         flex-flow: column nowrap;
         align-self: center;
+        transition: all 500ms ease;
     }
     .background1:hover .button {
         transform: translateY(-0.3em);
+        transition: all 500ms ease;
+        
     }
 
     .background1:hover .out_links{
@@ -173,6 +184,8 @@ a {
     
     .background2:hover .button {
         transform: translateY(-0.3em);
+        transition: all 500ms ease;
+        
     }
     .navbar {
         display:flex;
@@ -184,6 +197,10 @@ a {
     .nav_button {
         flex-basis: 20%;
     }
+        .nav_button:hover {
+            transform: scale(1.1);
+            transition: all 500ms ease;
+        }
 
     .links {
         display:none;
@@ -197,5 +214,6 @@ a {
     }
         .button2:hover, .out_button:hover {
             transform: scale(1.5);
+            transition: all 500ms ease;
         }
 }
