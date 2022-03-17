@@ -8,17 +8,14 @@
     <h2>Software Engineer • Sound Artist</h2>
   </section>
   <nav class="navbar">
-    <a class= "button" href={{url_for('index')}}>Overview</a>
-    <a class= "button" href={{url_for('software_engineer')}}>Software Engineer</a>
-    <a class= "button" href={{url_for('sound_artist')}}>Sound Artist</a>
-    <a class= "button" href="#">Contact Form</a>
+    <a class= "nav_button" href={{url_for('index')}}>Overview</a>
+    <a class= "nav_button" href={{url_for('software_engineer')}}>Software Engineer</a>
+    <a class= "nav_button" href={{url_for('sound_artist')}}>Sound Artist</a>
+    <a class= "nav_button" href="#">Contact Form</a>
   </nav>
-  <div class="container">
-  <div class="wrap">
-    <img class="image" src="static/images/cvphoto-edit.png" alt="Portrait Photo">
-  </div> 
-  <section class="body">
-    <h2><br> To Do List</h2>
+  <div class="main_background"></div>
+  <section class="body todo">
+    <h2> Pages to do</h2>
     <p>
         {% for slug, todo in todo.items() %}
             <li>
@@ -30,10 +27,8 @@
             </li>
         {% endfor %}
     </p>
-    
+    </section>
     <div class="links">
-        <a class= "button" href={{url_for('index')}}>Overview</a>
+        <a class= "button2" href={{url_for('index')}}>Overview</a>
     </div>
-  </section>
-  </div>
   {% endblock %}

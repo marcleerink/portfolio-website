@@ -14,9 +14,33 @@
     display: flex; 
     flex-wrap:nowrap;
     justify-content: center;
-    margin: 16px;
+    margin: 12px;
 }
-
+.out_button {
+    padding: 16px;
+    margin:12px;
+    font-size: min(10vw, 24px);
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(255, 243, 210); 
+    border-radius: 20px;
+    width: max(10vw, 24px);
+}
+    .out_button:hover, .out_button:active {
+        transform: scale(1.1);
+        opacity: 1;
+        transition: all 700ms ease;
+    }
+.body {
+    display:flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-items: space-around;
+    margin: 0px;
+    padding: 0px;
+}
 @media (min-width: 500px) {
     .out_links {
         gap:10%
@@ -29,9 +53,9 @@
         align-items: space-around;
         justify-items: center;
         background: rgb(255, 243, 210);
-        width: 83%;
+        width: 86%;
         padding: 16px;
-        margin-top:16px;
+        margin-top:12px;
         margin-bottom: 0px;
     }
 
