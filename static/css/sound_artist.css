@@ -1,0 +1,47 @@
+.main_background {
+    background-image: url('/static/images/altjira.jpg'); 
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70%;
+    
+}
+.sc-wrapper {
+    display:none;
+}
+
+.out_links {
+    display: flex; 
+    flex-wrap:nowrap;
+    justify-content: center;
+    margin: 16px;
+}
+
+@media (min-width: 500px) {
+    .out_links {
+        gap:10%
+    }
+}
+@media (min-width: 900px) {
+    .sc-wrapper{
+        display:flex;
+        flex-flow: column nowrap;
+        align-items: space-around;
+        justify-items: center;
+        background: rgb(255, 243, 210);
+        width: 83%;
+        padding: 16px;
+        margin-top:16px;
+        margin-bottom: 0px;
+    }
+
+    .body {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .out_button {
+        flex-basis:20%;
+        margin-top: 0px;
+    }
+}   

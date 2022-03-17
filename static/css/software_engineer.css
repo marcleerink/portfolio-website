@@ -1,18 +1,24 @@
-.se_logo_wrap {
-    width:100%;
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
 
+.main_background {
+    background-image: url('../images/cvphoto-edit.png');
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70%;
+    
 }
-.se_logo {
-    overflow: hidden;
+.projects_container {
+    display:none;
+}
+
+.body {
+    display: none;
 }
 .out_links {
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    margin: 12px;
+    display: flex; 
+    flex-wrap:nowrap;
+    justify-content: center;
+    margin: 16px;
 }
 
 .out_button {
@@ -27,10 +33,80 @@
     border-radius: 20px;
     width: max(10vw, 24px);
 }
+    .out_button:hover, .out_button:active .projects_container {
+        transform: scale(1.2);
+        opacity: 1;
+        transition: all 700ms ease;
+    }
 .body {
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    background: rgb(255, 243, 210);
+}
+@media (min-width: 500px) {
+    .out_links {
+        gap:10%
+    }
+}
+@media (min-width: 900px) {
+    .se_logo {
+        width: 30%;
+    }
+    .out_button {
+        
+        flex-basis:20%;
+    }
+    .body {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-items: space-around;
+        background: rgb(255, 243, 210);
+        padding: 16px;
+        margin: 16px;
+    }
+    .text {
+        flex-basis: 50%;
+        justify-self: center;
+    }
+    .se_exp {
+        flex-basis:50%;
+        justify-self: center;
+    }
+    .projects_container{
+        display:flex;
+        justify-content: space-around;
+        justify-items: center;
+        flex-flow: row nowrap;
+        align-items: center;
+        background: rgb(255, 243, 210);
+        padding: 16px;
+        margin: 16px;
 
+
+    }
+    .project_button {
+        
+        flex-basis:33%;
+        justify-self: center;
+
+    }
+      .project_content {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }   
+    .project_link {
+        font-size: min(5vw, 20px);
+        font-weight: bold;
+        color: black;
+        justify-self: top;
+        text-align: center;
+        text-decoration: none;
+    }
+        .project_link:hover {
+            transform: scale(1.2);
+            transition: all 700ms ease;
+        }
 }
