@@ -8,9 +8,9 @@
     <h2>Software Engineer</h2>
   </section>
   <nav class="navbar">
-    <a class= "nav_button" href={{url_for('index')}}>Overview</a>
-    <a class= "nav_button" href={{url_for('software_engineer')}}>Software Engineer</a>
-    <a class= "nav_button" href={{url_for('sound_artist')}}>Contact</a>
+    <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
+    <a class= "nav_button" href={{url_for('simple_pages.software_engineer')}}>Software Engineer</a>
+    <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Contact</a>
   </nav>
 
   <section class="projects_container">
@@ -49,6 +49,6 @@
     </div> 
 </section>
     <div class="links">
-        <a class= "button2" href={{url_for('index')}}>Overview</a>
+        <a class= "button2" href={{url_for('simple_pages.index')}}>Overview</a>
     </div>
   {% endblock %}

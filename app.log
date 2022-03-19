@@ -1,0 +1,16 @@
+root - WARNING - This will get logged to a file
+werkzeug - WARNING -  * Debugger is active!
+werkzeug - INFO -  * Debugger PIN: 204-114-118
+werkzeug - INFO - 127.0.0.1 -werkzeug - INFO -  * Restarting with stat
+ngineer HTTP/1.1" 200 -
+werkzeug - INFO - 127.0.0.1 - - [19/Mar/2022 16:41:03] "[36mGET /static/css/software_engineer.css HTTP/1.1[0m" 304 -
+werkzeug - INFO - 127.0.0.1 - - [19/Mar/2022 16:41:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+werkzeug - INFO - 127.0.0.1 - - [19/Mar/2022 16:41:03] "[36mGET /static/images/html.png HTTP/1.1[0m" 304 -
+werkzeug - INFO - 127.0.0.1 - - [19/Mar/2022 16:41:03] "[36mGET /static/images/cvphoto-edit.png HTTP/1.1[0m" 304 -
+werkzeug - INFO - 127.0.0.1 - - [19/Mar/2022 16:41:03] "[36mGET /static/font/Raleway-VariableFont_wght.ttf HTTP/1.1[0m" 304 -
+werkzeug - INFO - 127.0.0.1 - - [19/Mar/2022 16:41:03] "GET /favicon.ico HTTP/1.1" 200 -
+werkzeug - INFO - 127.0.0.1 - - [19/Mar/2022 16:41:05] "GET / HTTP/1.1" 200 -
+werkzeug - INFO - 127.0.0.1 - - [19/Mar/2022 16:41:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+werkzeug - INFO - 127.0.0.1 - - [19/Mar/2022 16:41:05] "[36mGET /static/images/cvphoto.png HTTP/1.1[0m" 304 -
+werkzeug - INFO - 127.0.0.1 - - [19/Mar/2022 16:41:05] "GET /favicon.ico HTTP/1.1" 200 -
+werkzeug - INFO -  * Detected change in '/Users/marcleerink/Documents/Def/foundations/flask_portfolio-websiteV2/app/app.py', reloading

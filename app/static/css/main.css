@@ -47,7 +47,7 @@ a {
 
 }
 .main_background {
-    background-image: url('/static/images/cvphoto.png'); 
+    background-image: url('../images/cvphoto.png'); 
     background-position: 50% 20%;
     background-repeat: no-repeat;
     background-size: cover;
