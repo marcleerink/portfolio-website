@@ -1,0 +1,45 @@
+.projects_container{
+    display:flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-flow: row wrap;
+    align-items: center;
+    background: rgb(255, 243, 210);
+    padding: 16px;
+    margin: 16px;
+
+}
+.project_button {
+    
+    flex-basis:100%;
+    justify-self: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding:12px;
+    overflow:hidden;
+
+}
+.project_content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}   
+.project_image {
+    width:50%;
+}
+
+@media (min-width: 700px) {
+    .project_button {
+        flex-basis: 45%
+    }
+@media (min-width: 1100px) {
+    .project_button {
+        flex-basis: 30%;
+
+    }
+    .project_highlight {
+        flex-basis: 100%;
+        flex-grow: 1.5;
+    }
+    
+}

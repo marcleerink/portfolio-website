@@ -26,29 +26,31 @@
         <p>.html
         <br>.css
         <br>.py
-        </p>
+        </p> 
     </section>
-        <div class="projects_container">
+        <section class="projects_container">
             <div class ="project_button"> 
                 <div class="project_content">
                     <h2>Project 1</h2>
+                    <img class="project_image" src="../static/images/html.png" alt="project_photo">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi scelerisque magna quis urna ultrices sodales. Donec rutrum nisl ac venenatis tempus. Donec molestie bibendum mauris, id luctus lacus consequat sit amet. Morbi facilisis luctus sem, et luctus est consectetur egestas. Nulla sed porttitor leo. Duis blandit odio vel arcu vehicula rutrum. Proin vitae leo a dui venenatis volutpat non at velit. Sed pulvinar elit eget dapibus dictum.
                     </p>
                 </div>
             </div> 
             <div class ="project_button"> 
                 <div class="project_content">
-                    <a class="project_link" href="#">More >>></a>
+                    <a class="project_link" href={{url_for('projects')}}>More >>></a>
                 </div>
             </div> 
             <div class ="project_button"> 
                 <div class="project_content">
                     <h2>Project 2</h2>
+                    <img class="project_image" src="../static/images/html.png" alt="project_photo">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi scelerisque magna quis urna ultrices sodales. Donec rutrum nisl ac venenatis tempus. Donec molestie bibendum mauris, id luctus lacus consequat sit amet. Morbi facilisis luctus sem, et luctus est consectetur egestas. Nulla sed porttitor leo. Duis blandit odio vel arcu vehicula rutrum. Proin vitae leo a dui venenatis volutpat non at velit. Sed pulvinar elit eget dapibus dictum.
                     </p>
                 </div>
             </div> 
-        </div>
+        </section>
     <section class="links_wrap">
         <div class="out_links">
             <a class="out_button" href={{url_for('cv')}}>CV</a>
@@ -56,7 +58,7 @@
             <a class="out_button" onclick=" window.open('https://www.linkedin.com/in/marc-leerink-82b83b121/','_blank')" ><i class="fa-brands fa-linkedin"></i></a>
         </div>  
         <div class="links">
-            <a class= "button2" href="#"> Projects</a>
+            <a class= "button2" href={{url_for('projects')}}> Projects</a>
             <a class= "button2" href={{url_for('index')}}>Overview</a>
         </div>
     </section>

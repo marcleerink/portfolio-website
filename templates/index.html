@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 
 {% block title %}Marc Leerink{% endblock %}
+
 {% block body %}
 <section class="header"> 
     <h1>Marc Leerink</h1>
     <h2>Software Engineer • Sound Artist</h2>
 </section>
 <nav class="navbar">
-    <a class= "nav_button" href={{url_for('contact')}}>Contact</a>
     <a class= "nav_button" href={{url_for('todo')}}>To Do</a>
+    <a class= "nav_button" href={{url_for('contact')}}>Contact</a>
 </nav>
 
 <div class="main_background">
@@ -26,12 +27,13 @@
             <a class= "button" href={{url_for('sound_artist')}}><i class="fa-solid fa-music"></i></a>
             <h2 class= "text_button" href={{url_for('sound_artist')}}>Sound Artist • Altjira</h2>
             <div class="links2">
-                <a onclick=" window.open('https://www.instagram.com/altjiramara','_blank')" class="button2"><i class="fab fa-instagram"></i></a>
-                <a onclick=" window.open('https://soundcloud.com/altjiramara','_blank')" class="button2"><i class="fa-brands fa-soundcloud"></i></a>
-                <a onclick=" window.open('https://bandcamp.com/maleerink','_blank')" class="button2"><i class="fa-brands fa-bandcamp"></i></a>
+                <a onclick=" window.open('https://www.instagram.com/altjiramara','_blank')" class="out_button"><i class="fab fa-instagram"></i></a>
+                <a onclick=" window.open('https://soundcloud.com/altjiramara','_blank')" class="out_button"><i class="fa-brands fa-soundcloud"></i></a>
+                <a onclick=" window.open('https://bandcamp.com/maleerink','_blank')" class="out_button"><i class="fa-brands fa-bandcamp"></i></a>
             </div>
         </figure>
     </div>
+
     <div class="links">
         <a class= "button2" href={{url_for('contact')}}>Contact</a>
         <a class= "button2" href={{url_for('todo')}}>To Do</a>

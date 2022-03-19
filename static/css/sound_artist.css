@@ -3,7 +3,6 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70%;
     
 }
 .sc-wrapper {
@@ -13,8 +12,8 @@
 .out_links {
     display: flex; 
     flex-wrap:nowrap;
-    justify-content: center;
-    margin: 12px;
+    justify-content: space-between;
+    margin-top: 12px;
 }
 .out_button {
     padding: 16px;
@@ -41,9 +40,10 @@
     margin: 0px;
     padding: 0px;
 }
-@media (min-width: 500px) {
+@media (min-width: 700px) {
     .out_links {
-        gap:10%
+        gap:3%;
+        justify-content: center;
     }
 }
 @media (min-width: 900px) {
@@ -64,8 +64,11 @@
         justify-content: center;
         align-items: center;
     }
+    .out_links {
+        justify-content: center;
+    }
     .out_button {
-        flex-basis:20%;
+        flex-basis:5%;
         margin-top: 0px;
     }
 }   

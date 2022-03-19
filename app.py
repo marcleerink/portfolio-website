@@ -28,6 +28,10 @@ def sound_artist():
 def contact():  
     return render_template('contact_form.html')
 
+@app.route('/projects')
+def projects():  
+    return render_template('projects.html')
+
 @app.route('/cv')
 def cv():
     return send_file('static/downloads/cv.pdf')

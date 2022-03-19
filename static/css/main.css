@@ -1,6 +1,6 @@
 @font-face {
     font-family: raleway;
-    src: url(../font/Raleway-VariableFont_wght.ttf);
+    src: url(../font/Raleway-VariableFont_wght.ttf)
 }
 html, body {
     height: 100%; 
@@ -25,7 +25,6 @@ h2 {
   }
 
 p {
-    max-width: 80%;
     font-family: raleway, Helvetica, sans-serif;
     font-size: min(4vw, 16px);
     color: black;
@@ -52,7 +51,8 @@ a {
     background-position: 50% 20%;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70%;
+    height: 80vh;
+    margin-top:16px;
     
 }
 .backgroundcontainer {
@@ -93,7 +93,8 @@ a {
     align-self: center;
     font-size: 10em;
     opacity: 0.5;
-    background: 1px solid black
+    background: 1px solid black;
+    cursor: pointer;
 
 }
     .button:hover, .button:active {
@@ -122,6 +123,7 @@ a {
     border-radius: 20px;
     width: max(100vw, 24px);
     opacity: 0.8;
+    cursor: pointer;
 }
     .button2:hover, .button2:active {
         transform: scale(1.1);
@@ -149,13 +151,18 @@ a {
     text-decoration: none;
 }
 
-@media (min-width: 500px) {
+
+@media (min-width: 700px) {
     .button2 {
         width: max(50vw, 24px);
+    }
 }
 @media (min-width: 900px) {
     .header {
         margin:0px;
+    }
+    .main_background {
+        margin-top: 0px;
     }
     .backgroundcontainer {
         flex-direction: row;
@@ -210,6 +217,7 @@ a {
         width:100%;
         justify-content: center;
         gap:10%;
+        margin:0;
     }
 
     .nav_button {
@@ -228,10 +236,11 @@ a {
         align-self: center;
         flex-basis: 33%;
         margin-top: 10vh;
-        
     }
         .button2:hover, .out_button:hover {
             transform: scale(1.5);
             transition: all 500ms ease;
         }
+    
 }
+

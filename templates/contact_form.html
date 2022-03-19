@@ -2,48 +2,45 @@
 
 {% block title %}Marc Leerink - To Do{% endblock %}
 
+{% block stylesheet %}<link rel="stylesheet" href="../static/css/form.css">{% endblock %}
+
 {% block body %}
 <section class="header">
     <h1>Marc Leerink</h1>
     <h2>Software Engineer • Sound Artist</h2>
   </section>
   <nav class="navbar">
-    <a class= "button" href={{url_for('index')}}>Overview</a>
-    <a class= "button" href={{url_for('software_engineer')}}>Software Engineer</a>
-    <a class= "button" href={{url_for('sound_artist')}}>Sound Artist</a>
+    <a class= "nav_button" href={{url_for('index')}}>Overview</a>
+    <a class= "nav_button" href={{url_for('software_engineer')}}>Software Engineer</a>
+    <a class= "nav_button" href={{url_for('sound_artist')}}>Contact</a>
   </nav>
-  <div class="container">
-  <div class="wrap">
-    <img class="image" src="static/images/cvphoto-edit.png" alt="Portrait Photo">
-  </div> 
-  <section class="body">
+
+<section class="body form_wrap">
     <form class="form" action="messages" method="post">
         <ul>
-         <li>
-           <label for="name">Name:</label>
-           <input type="text" id="name" name="name">
-         </li>
-         <li>
-           <label for="mail">E-mail:</label>
-           <input type="email" id="mail" name="_replyto">
-         </li>
-         <li>
-            <label for="subject">Subject</label>
-            <input type="subject" id="subject" name="Subject">
-          </li>
-         <li>
-           <label for="msg">Message:</label>
-           <textarea id="msg" name="message"></textarea>
-         </li>
-         <li class="button3">
-            <button type="submit">Send your message</button>
-          </li>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </li>
+            <li>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="_replyto">
+            </li>
+            <li>
+                <label for="subject">Subject:</label>
+                <input type="subject" id="subject" name="Subject">
+            </li>
+            <li>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="message"></textarea>
+            </li>
+            <li class="button3">
+                <button type="submit">Send</button>
+            </li>
         </ul>
-       </form>
-    
+    </form>
+</section>  
     <div class="links">
-        <a class= "button" href={{url_for('index')}}>Overview</a>
+        <a class= "button2" href={{url_for('index')}}>Overview</a>
     </div>
-  </section>
-  </div>
   {% endblock %}

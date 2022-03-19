@@ -4,7 +4,6 @@
     background-position: 50% 20%;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70%;
     
 }
 .main_background2 {
@@ -23,13 +22,16 @@
 .out_links {
     display: flex; 
     flex-wrap:nowrap;
-    justify-content: center;
+    justify-content: space-between;
     margin: 12px;
+
 }
 
 .out_button {
     padding: 16px;
     margin:12px;
+    justify-content: space-between;
+    gap:20%;
     font-size: min(10vw, 24px);
     font-weight: bold;
     color: black;
@@ -52,9 +54,10 @@
 
 }
 
-@media (min-width: 500px) {
+@media (min-width: 700px) {
     .out_links {
-        gap:10%
+        justify-content: center;
+        gap:3%;
     }
 }
 @media (min-width: 900px) {
@@ -62,19 +65,7 @@
         width: 30%;
     }
     .out_button {
-        
-        flex-basis:20%;
-    }
-    .body {
-        
-    }
-    .text {
-        
-        
-    }
-    .se_exp {
-        
-        
+        flex-basis:5%;
     }
     .projects_container{
         display:flex;
@@ -92,12 +83,14 @@
         
         flex-basis:33%;
         justify-self: center;
+        padding: 12px;
 
     }
       .project_content {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+        
     }   
     .project_link {
         font-size: min(5vw, 20px);
@@ -111,4 +104,7 @@
             transform: scale(1.2);
             transition: all 700ms ease;
         }
+    .project_image {
+        width:50%;
+    }
 }
