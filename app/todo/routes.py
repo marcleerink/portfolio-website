@@ -1,24 +1,16 @@
-from flask import Blueprint, render_template
-
+from flask import Blueprint, render_template, request, current_app
 from app import todo
+from .models import Todo
 
 blueprint = Blueprint('todo', __name__)
-
-to_do_list = {
-    'sign-up': {'page' : 'Sign Up', 'priority' : 'Low', 'url' : 'sign-up'},
-    'log-in': {'page' : 'Log In', 'priority' : 'Low', 'url' : 'log-in'},
-    'contact': {'page' : 'Contact Form', 'priority' : 'Medium', 'url' : 'contact'},
-    'projects': {'page' : 'Projects', 'priority' : 'High', 'url' : 'projects'},
-}
-
  
-@blueprint.route('/<slug>')
+@blueprint.route('/to-do/<slug>')
 def pages(slug):
-    if slug in to_do_list:
-        return '<h2>'+ to_do_list[slug]['page'] + '</h2>' + '<p> Create a ' + to_do_list[slug]['page'] + ' Page <br> Priority: ' + to_do_list[slug]['priority'] + '</p>'
-    else:
-        return "Requested page does not excist"
+    todo = Todo.query.filter_by(slug=slug).first_or_404()
+    return render_template('todo/show.html', todo=todo)
 
 @blueprint.route('/to-do')
 def todo():
-    return render_template('todo/index.html', todo = to_do_list)
+    page_number = request.args.get('page', 1, type=int)
+    todo_pagination = Todo.query.paginate(page_number, current_app.config['TODO_PER_PAGE'])
+    return render_template('todo/index.html', todo_pagination = todo_pagination)

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Marc Leerink - To Do{% endblock %}
+{% block title %}Marc Leerink - Projects{% endblock %}
 {% block stylesheet %}<link rel="stylesheet" href="../static/css/projects.css">{% endblock %}
 {% block body %}
 <section class="header">
@@ -10,7 +10,7 @@
   <nav class="navbar">
     <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
     <a class= "nav_button" href={{url_for('simple_pages.software_engineer')}}>Software Engineer</a>
-    <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Contact</a>
+    <a class= "nav_button" href={{url_for('messages.get_contact')}}>Contact</a>
   </nav>
 
   <section class="projects_container">

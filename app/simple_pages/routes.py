@@ -14,10 +14,6 @@ def software_engineer():
 def sound_artist():
     return render_template('simple_pages/sound_artist.html')
 
-@blueprint.route('/contact')
-def contact():  
-    return render_template('simple_pages/contact_form.html')
-
 @blueprint.route('/projects')
 def projects():  
     return render_template('simple_pages/projects.html')

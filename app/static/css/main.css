@@ -98,7 +98,7 @@ a {
 
 }
     .button:hover, .button:active {
-        transform: scale(1.2);
+        transform: scale(1.1);
         opacity: 1;
         transition: all 700ms ease;
 } 

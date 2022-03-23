@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Marc Leerink - To Do{% endblock %}
+{% block title %}Contact - Marc Leerink {% endblock %}
 
 {% block stylesheet %}<link rel="stylesheet" href="../static/css/form.css">{% endblock %}
 
@@ -12,27 +12,27 @@
   <nav class="navbar">
     <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
     <a class= "nav_button" href={{url_for('simple_pages.software_engineer')}}>Software Engineer</a>
-    <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Contact</a>
+    <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Sound Artist</a>
   </nav>
 
 <section class="body form_wrap">
-    <form class="form" action="messages" method="post">
+    <form class="form" method="POST">
         <ul>
             <li>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+                <input type="text" name="name" id="name">
             </li>
             <li>
-                <label for="mail">E-mail:</label>
-                <input type="email" id="mail" name="_replyto">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
             </li>
             <li>
                 <label for="subject">Subject:</label>
                 <input type="subject" id="subject" name="Subject">
             </li>
             <li>
-                <label for="msg">Message:</label>
-                <textarea id="msg" name="message"></textarea>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
             </li>
             <li class="button3">
                 <button type="submit">Send</button>
