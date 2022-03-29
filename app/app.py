@@ -1,8 +1,6 @@
 from flask import Flask
 from . import todo, simple_pages, messages
-from app.extensions.database import db
 from app.extensions.database import db, migrate
-
 
 def create_app():
     app = Flask(__name__)
