@@ -46,7 +46,7 @@
 </section>  
     <div class="links">
         {% if current_user.is_authenticated %}
-        <a class= "nav_button" href={{ url_for('messages.logout') }}>Log Out</a>
+        <a class= "button2" href={{ url_for('messages.logout') }}>Log Out</a>
         {% endif %}
         <a class= "button2" href={{url_for('simple_pages.index')}}>Overview</a>
     </div>

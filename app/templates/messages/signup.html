@@ -11,7 +11,7 @@
   </section>
   <nav class="navbar">
     <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
-    <a class= "nav_button" href={{url_for('messages.get_signup')}}>Sign Up</a>
+    <a class= "nav_button" href={{url_for('messages.get_login')}}>Log In</a>
   </nav>
 <section class="body form_wrap">
     <form action="/sign-up" class="form" method="post">
@@ -43,7 +43,7 @@
     </form>
 </section>
     <div class="links">
-        <a class= "nav_button" href={{url_for('messages.get_login')}}>Log In</a>
+        <a class= "button2" href={{url_for('messages.get_login')}}>Log In</a>
         <a class= "button2" href={{url_for('simple_pages.index')}}>Overview</a>
     </div>
   {% endblock %}

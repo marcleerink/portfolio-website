@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, url_for, redirect, flash
+from flask import Blueprint, render_template, request, url_for, redirect, flash, current_app
 from werkzeug.security import generate_password_hash, check_password_hash
 from .models import Message, User
 from flask_login import LoginManager, login_required, login_user, current_user, logout_user
@@ -29,7 +29,10 @@ def get_signup():
 @blueprint.post('/sign-up')
 def post_signup():
     #create a user
-    name = request.form.get('name')
+    name = request.form.get('name'),
+    email = request.form.get('email'),
+    password = request.form.get('password'),
+   
     email = request.form.get('email')
     password = request.form.get('password')
 
