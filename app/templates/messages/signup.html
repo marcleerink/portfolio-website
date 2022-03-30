@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Log In - Marc Leerink {% endblock %}
+{% block title %}Sign Up - Marc Leerink {% endblock %}
 
 {% block stylesheet %}<link rel="stylesheet" href="../static/css/form.css">{% endblock %}
 
@@ -14,37 +14,34 @@
     <a class= "nav_button" href={{url_for('simple_pages.software_engineer')}}>Software Engineer</a>
     <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Sound Artist</a>
   </nav>
-
 <section class="body form_wrap">
-    <form action="/log-in" class="form" method="post" autocomplete="on">
+    <form action="/sign-up" class="form" method="post">
         <ul>
             {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                  <li>{{ message }}. No account yet? <a href="{{ url_for('messages.get_signup') }}">Sign Up</a>.</li>
-        
+                  <li>{{ message }}</li>
                 {% endfor %}
               {% endif %}
             {% endwith %}
             <li>
+                <input type="name" id="name" name="name" placeholder='Name' value="{{
+                    request.form.name }}" required >
+            </li>
+            <li>
                 <input type="email" id="email" name="email" placeholder='E-Mail' value="{{
-                    request.form.username }}" required>
+                    request.form.email }}" required>
             </li>
             <li>
                 <input type="password" id="password" name="password" placeholder='Password' value="{{
                     request.form.password }}" required >
             </li>
-            <li>
-                <input type="checkbox" name="remember">
-                    Remember me
-            </li>
             <li class="button3">
-                <button type="submit">Log In</button>
+                <button type="submit">Sign Up</button>
             </li>
         </ul>
-   
     </form>
-</section>  
+</section>
     <div class="links">
         <a class= "button2" href={{url_for('simple_pages.index')}}>Overview</a>
     </div>

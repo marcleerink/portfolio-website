@@ -14,21 +14,21 @@
     <a class= "nav_button" href={{url_for('simple_pages.software_engineer')}}>Software Engineer</a>
     <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Sound Artist</a>
   </nav>
-
+<h2> Welcome, {{ name }}</h2>
 <section class="body form_wrap">
-    <form action="/contact" class="form" method="post">
+    <form action="/contact" class="form" method="post" autocomplete="on">
         <ul>
             <li>
                 <label for="name">Name:</label>
-                <input type="text" name="name" id="name" required>
+                <input type="text" name="name" id="name" placeholder='{{ name }}'required>
             </li>
             <li>
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder='{{ email }}'required>
             </li>
             <li>
                 <label for="subject">Subject:</label>
-                <input type="subject" id="subject" name="Subject" required>
+                <input type="subject" id="subject" name="Subject" autofocus required >
             </li>
             <li>
                 <label for="message">Message:</label>
