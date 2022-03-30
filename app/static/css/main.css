@@ -40,6 +40,25 @@ a {
     font-style: normal;
     text-decoration: none;
 }
+li {
+    font-family: raleway, Helvetica, sans-serif;
+    justify-content: center;
+    font-size: min(4vw, 16px);
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+}
+button {
+    flex-basis: 20%;
+    margin-left: 0.5em;
+    font-family: raleway, Helvetica, sans-serif;
+    font-size: min(4vw, 20px);
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgb(255, 243, 210);
+}
 .header {
     width:100%;
     margin:12px;
@@ -86,8 +105,6 @@ a {
     .background2:hover {
         background-color: rgb(255, 243, 210);
     }
-    
-
 .button {
     justify-self: center;
     align-self: center;
@@ -114,8 +131,8 @@ a {
     padding: 16px;
     margin-top: 12px;
     margin-bottom: 12px;
-    font-size: min(10vw, 24px);
-    font-weight: bold;
+    font-size: 1.5em;
+    font-weight: bolder;
     color: black;
     text-align: center;
     text-decoration: none;
@@ -129,6 +146,13 @@ a {
         transform: scale(1.1);
         opacity: 1;
         transition: all 500ms ease;
+}
+.button3 {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
+    cursor: pointer;
 }
 
 .text_button, .links2, .out_links{

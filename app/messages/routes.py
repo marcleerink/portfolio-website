@@ -17,6 +17,7 @@ def post_contact():
     message.save()
 
     messages = Message.query.all()
+    flash('Message sent!')
     return render_template('messages/contact_form.html', messages = messages)
 
 

@@ -29,15 +29,11 @@ form li + li {
     margin-top: 1em;
 }
 
-label {
-    display: inline-flex;
-    width: 90px;
-    text-align: right;
-}
 
 input,textarea {
     font-family: raleway, Helvetica, sans-serif;
     font-size: min(4vw, 20px);
+    width:100%;
     box-sizing: border-box;
     border: 1px solid grey;
 }
@@ -49,24 +45,6 @@ input:focus,textarea:focus {
 textarea {
     vertical-align: top;
     height: 5em;
-}
-
-
-
-.button3 {
-    display:flex;
-    justify-content: space-around;
-}
-
-button {
-    flex-basis: 50%;
-    margin-left: 0.5em;
-    font-family: raleway, Helvetica, sans-serif;
-    font-size: min(4vw, 20px);
-    border: 1px solid black;
-    border-radius: 20px;
-    background-color: rgb(255, 243, 210);
-
 }
     button:active, button:hover {
         transform: scale(1.1);
