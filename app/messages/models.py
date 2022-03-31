@@ -1,6 +1,6 @@
 from app.extensions.database import db, CrudMixin
 from flask_login import UserMixin
-
+import datetime
 class User(UserMixin, db.Model, CrudMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120))

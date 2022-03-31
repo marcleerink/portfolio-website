@@ -12,6 +12,7 @@
   <nav class="navbar">
     <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
     {% if current_user.is_authenticated %}
+    <a class= "nav_button" href={{ url_for('messages.profile') }}>My Account</a>
     <a class= "nav_button" href={{ url_for('messages.logout') }}>Log Out</a>
     {% endif %}
   </nav>
@@ -46,6 +47,7 @@
 </section>  
     <div class="links">
         {% if current_user.is_authenticated %}
+        <a class= "button2" href={{ url_for('messages.profile') }}>My Account</a>
         <a class= "button2" href={{ url_for('messages.logout') }}>Log Out</a>
         {% endif %}
         <a class= "button2" href={{url_for('simple_pages.index')}}>Overview</a>

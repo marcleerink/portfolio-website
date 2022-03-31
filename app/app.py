@@ -7,7 +7,7 @@ from flask_login import LoginManager
 def create_app():
     app = Flask(__name__)
     app.config.from_object('app.config')
-    app.secret_key = 'secret_key'
+    app.secret_key = 'JGKS$A%)GSH(%$JANG$)%MSN%(SHS'
 
     login_manager = LoginManager()
     login_manager.login_view = 'messages.get_login'

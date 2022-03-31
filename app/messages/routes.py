@@ -1,3 +1,4 @@
+from pyexpat.errors import messages
 from flask import Blueprint, render_template, request, url_for, redirect, flash, current_app
 from werkzeug.security import generate_password_hash, check_password_hash
 from .models import Message, User
@@ -5,25 +6,9 @@ from flask_login import LoginManager, login_required, login_user, current_user, 
 
 blueprint = Blueprint('messages', __name__)
 
-@blueprint.get('/contact')
-@login_required
-def get_contact():
-    return render_template('messages/contact_form.html', name=current_user.name, email=current_user.email)
-
-@blueprint.post('/contact')
-def post_contact():
-    # Create a message
-    message = Message()
-    message.save()
-
-    messages = Message.query.all()
-    flash('Message sent!')
-    return render_template('messages/contact_form.html', messages = messages)
-
 
 @blueprint.get('/sign-up')
 def get_signup():
-
     return render_template('messages/signup.html')
 
 @blueprint.post('/sign-up')
@@ -68,10 +53,31 @@ def post_login():
         flash ('Incorrect email or password, try again, ')
         return redirect(url_for('messages.get_login'))
     login_user(user, remember=remember)
-    return redirect(url_for('messages.get_contact'))
+    return redirect(url_for('messages.profile'))
 
 @blueprint.route('/log-out')
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('simple_pages.index'))
+
+@blueprint.route('/profile')
+def profile():
+    message = Message.query.all()
+    return render_template('messages/profile.html', name=current_user.name, email=current_user.email, messages = messages)
+
+
+@blueprint.get('/contact')
+@login_required
+def get_contact():
+    return render_template('messages/contact_form.html', name=current_user.name, email=current_user.email)
+
+@blueprint.post('/contact')
+def post_contact():
+    # Create a message
+    message = Message()
+    message.save()
+
+    messages = Message.query.all()
+    flash('Message sent!')
+    return render_template('messages/contact_form.html', messages = messages)
