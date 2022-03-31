@@ -4,8 +4,7 @@ blueprint = Blueprint('simple_pages', __name__)
 
 @blueprint.route('/')
 def index():
-    return "hello" 
-    # return render_template('simple_pages/index.html')
+    return render_template('simple_pages/index.html')
 
 @blueprint.route('/software-engineer')
 def software_engineer():
