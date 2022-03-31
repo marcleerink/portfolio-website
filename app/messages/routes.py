@@ -29,24 +29,26 @@ def get_signup():
 @blueprint.post('/sign-up')
 def post_signup():
     #create a user
-    name = request.form.get('name'),
-    email = request.form.get('email'),
-    password = request.form.get('password'),
-   
+    name = request.form.get('name')
     email = request.form.get('email')
     password = request.form.get('password')
+    confirm_password = request.form.get('confirm_password')
+
+    if password !=confirm_password:
+        flash('Passwords not identical, try again')
+        return redirect(url_for('messages.get_signup'))
 
     user = User.query.filter_by(email=email).first()
 
     if user:
-        flash('Email already exists')
+        flash('Email already exists. Do you have an account already?')
         return redirect(url_for('messages.get_signup'))
 
     new_user = User(name=name, email=email, password=generate_password_hash(password, method='sha256'))
     new_user.save()
 
-    users = User.query.all()
-    return render_template('messages/login.html', users = users)
+    # users = User.query.all()
+    return render_template('messages/login.html')
 
 
 @blueprint.get('/log-in')

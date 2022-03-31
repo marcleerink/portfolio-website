@@ -19,10 +19,10 @@
             {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                  <li>{{ message }}. Do you have a account already?<br><br>
-                     <a class="button3" href="{{ url_for('messages.get_login') }}">Log in</a></li>
+                    <li>{{ message }}<br><br>
+                        <a class="button3" href="{{ url_for('messages.get_login') }}">Log in</a></li>
                 {% endfor %}
-              {% endif %}
+            {% endif %}
             {% endwith %}
             <li>
                 <input type="name" id="name" name="name" placeholder='Name' value="{{
@@ -34,7 +34,11 @@
             </li>
             <li>
                 <input type="password" id="password" name="password" placeholder='Password' value="{{
-                    request.form.password }}" maxlength='120' required >
+                    request.form.password }}" minlenght='8' maxlength='120' required >
+            </li>
+            <li>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder='Confirm Password' value="{{
+                    request.form.confirm_password }}" minlenght='8' maxlength='120' required >
             </li>
             <li class="button3">
                 <button type="submit">Sign Up</button>
