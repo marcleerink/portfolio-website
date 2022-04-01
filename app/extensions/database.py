@@ -11,7 +11,7 @@ class CrudMixin():
     def delete(self):
         db.session.delete(self)
         db.session.commit()
-        return
+        return 
         
 db = SQLAlchemy()
 migrate = Migrate()

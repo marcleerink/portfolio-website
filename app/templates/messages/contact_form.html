@@ -29,7 +29,11 @@
               {% endif %}
             {% endwith %}
             <li>
-                <input list="subjects" type="text"name="subject" id="subject" placeholder="Subject" required autofocus>
+                Your Email: {{ email }}
+            </li>
+            <li>
+                <input list="subjects" type="text"name="subject" id="subject" placeholder="Subject" value="{{
+                    request.form.subject }}"required autofocus>
                 <datalist id="subjects">
                     <option value="General">
                     <option value="Software Engineer">
@@ -37,7 +41,8 @@
                   </datalist>
             </li>
             <li>
-                <textarea id="message" name="message" placeholder="Message"required></textarea>
+                <textarea id="message" name="message" placeholder="Message" value="{{
+                    request.form.message }}"required></textarea>
             </li>
             <li class="button3" >
                 <button type="submit">Send</button>

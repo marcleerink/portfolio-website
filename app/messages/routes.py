@@ -32,7 +32,6 @@ def post_signup():
     new_user = User(name=name, email=email, password=generate_password_hash(password, method='sha256'))
     new_user.save()
 
-    # users = User.query.all()
     return render_template('messages/login.html')
 
 
@@ -63,7 +62,7 @@ def logout():
 
 @blueprint.route('/profile')
 def profile():
-    message = Message.query.all()
+    messages = Message.query.all()
     return render_template('messages/profile.html', name=current_user.name, email=current_user.email, messages = messages)
 
 
@@ -75,9 +74,15 @@ def get_contact():
 @blueprint.post('/contact')
 def post_contact():
     # Create a message
-    message = Message()
-    message.save()
+    # message = Message()
+    # message.save()
 
-    messages = Message.query.all()
+    # messages = Message.query.all()
+    subject = request.form.get('subject')
+    message = request.form.get('message')
+
+    new_message = Message(subject=subject, message=message)
+    new_message.save()
+    
     flash('Message sent!')
-    return render_template('messages/contact_form.html', messages = messages)
+    return render_template('messages/contact_form.html')
