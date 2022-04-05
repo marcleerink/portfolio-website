@@ -10,7 +10,6 @@
 
 }
 .project_button {
-    
     flex-basis:100%;
     justify-self: center;
     margin-top: 2vh;
@@ -23,7 +22,9 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    align-content:center;
 }   
+
 .project_image {
     align-self: center;
     width:50%;
@@ -41,6 +42,5 @@
     .project_highlight {
         flex-basis: 100%;
         flex-grow: 1.5;
-    }
-    
+    }  
 }

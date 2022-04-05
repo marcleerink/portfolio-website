@@ -21,7 +21,7 @@
             <a href="/projects/{{ project.slug }}">
             <h2>{{ project.title }}</h2>
             <img class="project_image" src="../static/images/html.png" alt="project_photo">
-            <p>{{ project.content }}</p>
+            <p class="text_align_left">{{ project.content }}</p>
             </a>
         </div>
     </div> 
@@ -31,7 +31,7 @@
         <a href="/projects/{{ project.slug }}">
             <h2>{{ project.title }}</h2>
             <img class="project_image" src="../static/images/html.png" alt="project_photo">
-            <p>{{ project.content }}</p>
+            <p class="text_align_left">{{ project.content }}</p>
         </a>
         </div>
     </div> 
@@ -39,21 +39,18 @@
 {% endfor %}
 </section>
 <nav class="page_nav">
-    {% if project_pagination.prev_numb != None %}
+    {% if project_pagination.has_prev %}
         <a class= "nav_button" href="/projects?page={{ project_pagination.prev_num }}">Previous Page</a>
-    {% else %}
-        <span>Previous Page</span>
     {% endif %}
 
-    {% if project_pagination.next_numb != None %}
+    {% if project_pagination.has_next %}
         <a class= "nav_button" href="/projects?page={{ project_pagination.next_num }}">Next Page</a>
-    {% else %}
-        <span>Next Page</span>
     {% endif %}
     
   </nav>
   <nav class="links">
-    <a class= "button2" href={{url_for('simple_pages.index')}}>Overview</a>
+    <a class= "button2" href={{url_for('software_engineer.project')}}> Projects</a>
+    <a class= "button2" href={{url_for('software_engineer.software_engineer')}}>Software Engineer</a>
   </nav>
         
   {% endblock %}

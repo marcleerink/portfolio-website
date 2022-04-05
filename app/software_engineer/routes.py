@@ -20,4 +20,4 @@ def projects_page(slug):
 def project():
     page_number = request.args.get('page', 1, type=int)
     project_pagination = Projects.query.paginate(page_number, current_app.config['PROJECTS_PER_PAGE'])
-    return render_template('software_engineer/projects.html', project_pagination = project_pagination)
+    return render_template('software_engineer/projects.html', project_pagination = project_pagination) 

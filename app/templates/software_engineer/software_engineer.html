@@ -18,36 +18,44 @@
 </div>
 </div>
     <section class="body">
-        <p> Software engineering student at CODE University. 
-            <br>Currently looking for a working student position to complement my learning journey. 
-            <br> <br> Learning objectives in the direction of Front-End Development, Web Development, Responsive Design and Practical Algorithms. 
+        <h2> Hi, I am Marc Leerink</h2>
+        <h3> <br>A passionate tech and music lover from the Netherlands, living in Berlin.</h3>
+        <p class="text_align_left">
+            I study Software Engineering at CODE University and have experience with Full-Stack Web Development
+            <br>I am currently looking for a working student position to complement my learning journey.
         </p>
+
         <h2><br>Skills</h2>
-        <p>.html
-        <br>.css
-        <br>.js
-        <br>.py
+        <p class="text_align_left"><i class="fa-brands fa-html5"></i> HTML
+        <br><i class="fa-brands fa-css3-alt"></i> CSS 
+        <br><i class="fa-brands fa-js-square"></i> JavaScript 
+        <br><i class="fa-brands fa-python"></i> Python with Flask
         </p> 
+        
+        <p class="text_align_left">
+            <br>I have a background in organizing music events and managing a music radio whilst producing and DJing on the side as well as advising clients in healthcare.
+            <br>My character would be best described as curious, communicative and creative. Furthermore, I possess strong analytical thinking skills and work solution-oriented with high attention to detail.
+        </p>
     </section>
-        <section class="projects_container">
-            {% for project in project_pagination.items %}
-            <div class ="project_button"> 
-                <div class="project_content">
-                <a href="/projects/{{ project.slug }}">
-                    <h2>{{ project.title }}</h2>
-                    <img class="project_image" src="../static/images/html.png" alt="project_photo">
-                    <p>{{ project.content }}</p>
-                </a>
-                </div>
-            </div> 
-            {% endfor %}
-            <div class ="project_button"> 
-                <div class="project_content">
-                    <a class="project_link" href={{url_for('software_engineer.project')}}>More >>></a>
-                </div>
-            </div> 
-        </section>
+    <section class="projects_container">
+        {% for project in project_pagination.items %}
+        <div class ="project_button"> 
+            <div class="project_content">
+            <a href="/projects/{{ project.slug }}">
+                <h2>{{ project.title }}</h2>
+                <img class="project_image" src="../static/images/html.png" alt="project_photo">
+                <p class="text_align_left">{{ project.content }}</p>
+            </a>
+            </div>
+        </div> 
+        {% endfor %}
+    </section>
     <section class="links_wrap">
+        <div class="project_button">
+            <div class="project_content">
+                <a class="out_button" href={{url_for('software_engineer.project')}}> All Projects</a>
+            </div>
+        </div>
         <div class="out_links">
             <a class="out_button" href={{url_for('simple_pages.cv')}}>CV</a>
             <a class="out_button" onclick=" window.open('https://github.com/marcleerink','_blank')"><i class="fa-brands fa-github"></i> </a>
