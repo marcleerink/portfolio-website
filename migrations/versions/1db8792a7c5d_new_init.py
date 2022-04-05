@@ -1,8 +1,8 @@
-"""new init to seed
+"""new init
 
-Revision ID: 2bf751e18930
+Revision ID: 1db8792a7c5d
 Revises: 
-Create Date: 2022-04-05 12:18:45.324165
+Create Date: 2022-04-05 17:45:59.653058
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '2bf751e18930'
+revision = '1db8792a7c5d'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -24,6 +24,7 @@ def upgrade():
     sa.Column('title', sa.String(length=80), nullable=True),
     sa.Column('content', sa.String(length=10000), nullable=True),
     sa.Column('priority', sa.Integer(), nullable=True),
+    sa.Column('image_url', sa.String(length=260), nullable=True),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('slug')
     )
