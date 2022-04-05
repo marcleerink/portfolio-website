@@ -1,5 +1,5 @@
 from flask import Flask
-from . import todo, simple_pages, messages, api
+from . import todo, simple_pages, messages, api, software_engineer
 from app.extensions.database import db, migrate
 from app.extensions.authentication import login_manager
 
@@ -18,6 +18,7 @@ def create_app():
 def register_blueprints(app: Flask):
     app.register_blueprint(simple_pages.routes.blueprint)
     app.register_blueprint(todo.routes.blueprint)
+    app.register_blueprint(software_engineer.routes.blueprint)
     app.register_blueprint(messages.routes.blueprint)
     app.register_blueprint(api.routes.blueprint)
 

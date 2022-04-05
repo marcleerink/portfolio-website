@@ -8,7 +8,6 @@
     <h2>Software Engineer • Sound Artist</h2>
 </section>
 <nav class="navbar">
-    <a class= "nav_button" href={{ url_for('todo.todo') }}>To Do</a>
     <a class= "nav_button" href={{ url_for('messages.get_contact') }}>Contact</a>
     {% if current_user.is_authenticated %}
     <a class= "nav_button" href={{ url_for('messages.logout') }}>Log Out</a>
@@ -18,8 +17,8 @@
 <div class="main_background">
     <div class="backgroundcontainer">
         <figure class='background1'>
-            <a class= "button" href={{ url_for('simple_pages.software_engineer') }}><i class="fa-solid fa-code"></i></a>
-            <h2 class= "text_button" href={{ url_for('simple_pages.software_engineer') }}>Software Engineer</h2>
+            <a class= "button" href={{ url_for('software_engineer.software_engineer') }}><i class="fa-solid fa-code"></i></a>
+            <h2 class= "text_button" href={{ url_for('software_engineer.software_engineer') }}>Software Engineer</h2>
             <div class="out_links">
                 <a class="out_button" href={{url_for('simple_pages.cv')}}>CV</a>
                 <a class="out_button" onclick=" window.open('https://github.com/marcleerink','_blank')"><i class="fa-brands fa-github"></i> </a>
@@ -40,7 +39,6 @@
     <div class="links">
         <a class= "button2" href={{ url_for('messages.get_contact') }}>Contact</a>
         {% if current_user.is_authenticated %}
-        <a class= "button2" href={{ url_for('todo.todo') }}>To Do</a>
         <a class= "button2" href={{ url_for('messages.logout') }}>Log Out</a>
         {% endif %}
     </div>

@@ -10,7 +10,7 @@ h1 {
     font-family: raleway, Helvetica, sans-serif;
     font-size: min(10vw, 60px);
     text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
     color: black;
     margin: 0;
   }
@@ -54,7 +54,7 @@ button {
     flex-basis: 20%;
     margin-left: 0.5em;
     font-family: raleway, Helvetica, sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     color:black;
     font-size: min(4vw, 20px);
     border: 1px solid black;
@@ -62,9 +62,10 @@ button {
     background-color: rgb(255, 243, 210);
 }
 .header {
-    width:100%;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
     margin:12px;
-    object-position: center;
 
 }
 .main_background {
@@ -173,9 +174,12 @@ button {
     margin:16px;
     padding:16px;
 }
-.todo {
-    text-decoration: none;
+.page_nav {
+    display: flex;
+    justify-content: space-evenly;
 }
+
+
 
 
 @media (min-width: 700px) {

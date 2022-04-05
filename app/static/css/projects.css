@@ -25,6 +25,7 @@
     align-items: center;
 }   
 .project_image {
+    align-self: center;
     width:50%;
 }
 
