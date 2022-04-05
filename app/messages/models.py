@@ -6,9 +6,11 @@ class User(UserMixin, db.Model, CrudMixin):
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(120))
     
-    messages = db.relationship('Message', backref='user', lazy=True)
+    messages = db.relationship('Message', backref='user')
 class Message(db.Model, CrudMixin):
     id = db.Column(db.Integer, primary_key=True)
     subject = db.Column(db.String(120))
-    message = db.Column(db.Text())
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
+    message = db.Column(db.String(10000))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+    # user = db.relationship('User', backref='message', foreign_keys=[user_id])

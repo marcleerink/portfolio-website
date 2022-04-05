@@ -1,3 +1,4 @@
+from email import message
 from pyexpat.errors import messages
 from flask import Blueprint, render_template, request, url_for, redirect, flash, current_app
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -63,7 +64,7 @@ def logout():
 @blueprint.route('/profile')
 def profile():
     messages = Message.query.all()
-    return render_template('messages/profile.html', name=current_user.name, email=current_user.email, messages = messages)
+    return render_template('messages/profile.html', name=current_user.name, email=current_user.email, messages=messages)
 
 
 @blueprint.get('/contact')
@@ -73,11 +74,6 @@ def get_contact():
 
 @blueprint.post('/contact')
 def post_contact():
-    # Create a message
-    # message = Message()
-    # message.save()
-
-    # messages = Message.query.all()
     subject = request.form.get('subject')
     message = request.form.get('message')
 

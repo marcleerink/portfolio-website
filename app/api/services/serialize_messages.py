@@ -1,6 +1,3 @@
-# from app.api.routes import users
-
-
 def serialize_users(users):
     users_list = []
 
