@@ -1,5 +1,6 @@
 from app.extensions.database import db, CrudMixin
 from flask_login import UserMixin
+
 class User(UserMixin, db.Model, CrudMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120))
@@ -12,5 +13,3 @@ class Message(db.Model, CrudMixin):
     subject = db.Column(db.String(120))
     message = db.Column(db.String(10000))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-
-    # user = db.relationship('User', backref='message', foreign_keys=[user_id])
