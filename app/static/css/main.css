@@ -28,7 +28,7 @@ p {
     font-family: raleway, Helvetica, sans-serif;
     font-size: min(4vw, 16px);
     color: black;
-    font-weight: lighter;
+    font-weight: normal;
     text-align: center;
 }
 a {
@@ -54,6 +54,8 @@ button {
     flex-basis: 20%;
     margin-left: 0.5em;
     font-family: raleway, Helvetica, sans-serif;
+    font-weight: bold;
+    color:black;
     font-size: min(4vw, 20px);
     border: 1px solid black;
     border-radius: 20px;
@@ -132,7 +134,7 @@ button {
     margin-top: 12px;
     margin-bottom: 12px;
     font-size: 1.5em;
-    font-weight: bolder;
+    font-weight: normal;
     color: black;
     text-align: center;
     text-decoration: none;
