@@ -16,7 +16,10 @@
     margin-bottom: 2vh;
     padding:12px;
     overflow:hidden;
-
+}
+    .project_button:hover {
+        transform: scale(1.02);
+        transition: all 700ms ease;
 }
 .project_content {
     display: flex;

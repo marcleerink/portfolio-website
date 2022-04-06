@@ -39,7 +39,7 @@
     width: max(10vw, 24px);
 }
     .out_button:hover, .out_button:active .projects_container {
-        transform: scale(1.2);
+        transform: scale(1.05);
         opacity: 1;
         transition: all 700ms ease;
     }
@@ -83,11 +83,14 @@
         justify-content: center;
         flex-basis:33%;
         justify-self: center;
-       
         margin: 0px;
-
     }
-      .project_content {
+        .project_button:hover {
+            transform: scale(1.02);
+            transition: all 700ms ease;
+        }
+      
+    .project_content {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
@@ -103,7 +106,7 @@
         margin:0px;
     }
         .project_link:hover {
-            transform: scale(1.2);
+            transform: scale(1.05);
             transition: all 700ms ease;
         }
     .project_image {

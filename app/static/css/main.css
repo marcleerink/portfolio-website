@@ -133,7 +133,7 @@ button {
 
 }
     .button:hover, .button:active {
-        transform: scale(1.1);
+        transform: scale(1.05);
         opacity: 1;
         transition: all 700ms ease;
 } 
@@ -161,7 +161,7 @@ button {
     cursor: pointer;
 }
     .button2:hover, .button2:active {
-        transform: scale(1.1);
+        transform: scale(1.05);
         opacity: 1;
         transition: all 500ms ease;
 }
@@ -269,7 +269,7 @@ button {
         flex-basis: 20%;
     }
         .nav_button:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             transition: all 500ms ease;
         }
 
@@ -283,7 +283,7 @@ button {
         margin-top: 10vh;
     }
         .button2:hover, .out_button:hover {
-            transform: scale(1.5);
+            transform: scale(1.05);
             transition: all 500ms ease;
         }
     
