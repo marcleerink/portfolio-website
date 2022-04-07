@@ -24,7 +24,10 @@
             <li> Email Address: {{ email }}</li><br>
             <li> Here is your messaging history: </li><br>
             {% for message in messages %}
-            <li> Message {{ message.id }}: {{ message.message }}</li>
+            <li> Sent at: {{ message.timestamp }}</li> 
+            <li> Subject: {{ message.subject }}</li> 
+            <li> Message:</li>
+            <li> {{ message.message }}</li><br>
             {% endfor %}
         </ul>
         

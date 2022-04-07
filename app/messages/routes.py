@@ -1,12 +1,16 @@
-from email import message
-from pyexpat.errors import messages
+# from email import message
+# from pyexpat.errors import messages
+import email
 from flask import Blueprint, render_template, request, url_for, redirect, flash, current_app
 from werkzeug.security import generate_password_hash, check_password_hash
 from .models import Message, User
 from flask_login import LoginManager, login_required, login_user, current_user, logout_user
+import smtplib
+from flask_mail import Mail
+from app.config import MAIL_PORT, MAIL_SERVER, MY_EMAIL, MY_EMAIL_PW
+
 
 blueprint = Blueprint('messages', __name__)
-
 
 @blueprint.get('/sign-up')
 def get_signup():
@@ -47,6 +51,7 @@ def post_login():
     remember = True if request.form.get('remember') else False
 
     user = User.query.filter_by(email=email).first()
+    
     #check if user exists
     #compare passwords with database
     if not user or not check_password_hash(user.password, password):
@@ -62,9 +67,12 @@ def logout():
     return redirect(url_for('simple_pages.index'))
 
 @blueprint.route('/profile')
+@login_required
 def profile():
-    messages = Message.query.all()
-    return render_template('messages/profile.html', name=current_user.name, email=current_user.email, messages=messages)
+    messages = Message.query.filter_by(user_id= current_user.id).all()
+    # messages = current_user.messages_sent.order_by(Message.timestamp.desc())
+    
+    return render_template('messages/profile.html', name = current_user.name, email = current_user.email, messages = messages)
 
 
 @blueprint.get('/contact')
@@ -74,11 +82,27 @@ def get_contact():
 
 @blueprint.post('/contact')
 def post_contact():
+    # get input from form
     subject = request.form.get('subject')
     message = request.form.get('message')
+    user_id = current_user.id
 
-    new_message = Message(subject=subject, message=message)
-    new_message.save()
-    
-    flash('Message sent!')
-    return render_template('messages/contact_form.html')
+    #check if input isn't to long
+    if len(subject) > 119 or len(message) > 4999:
+        flash ('Input to long')
+    else:
+        # Store message in database
+        new_message = Message(subject=subject, message=message, user_id = user_id)
+        new_message.save()
+
+        # Send message to my email
+        try: 
+            server = smtplib.SMTP(MAIL_SERVER, MAIL_PORT)
+            server.starttls()
+            server.login(MY_EMAIL, MY_EMAIL_PW)
+            server.sendmail(MY_EMAIL, MY_EMAIL, current_user.email + subject + message)
+            flash('Message sent!')
+        except smtplib.SMTPException:
+            flash('Unable to send mail')
+            
+    return render_template('messages/contact_form.html', name = current_user.name, email = current_user.email)
