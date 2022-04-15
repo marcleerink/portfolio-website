@@ -51,19 +51,21 @@
    git clone https://github.com/marcleerink/portfolio-website.git
    ```
 2. Create virtual environment
-   ```sh
    Linux/MacOS:
+   ```sh
    python3 -m venv venv
-
+   ```
    Powershell:
+   ```sh
    py -3 -m venv venv
    ```
 3. Activate virtual environment
+   Linux/MacOS:
    ```sh
-   Linux/MacOS
    venv/bin/activate
-
-   Powershell
+   ```
+   Powershell:
+   ```sh
    venv\Scripts\activate
    ```
 4. Install dependencies
