@@ -38,6 +38,7 @@
 - Messaging
     - Send message
     - View sent messages
+- Responsive design
 ### Built With
 
 - Python/Flask
@@ -52,7 +53,7 @@
    ```
 2. Create virtual environment
    
-   inux/MacOS:
+   Linux/MacOS:
    ```sh
    python3 -m venv venv
    ```
