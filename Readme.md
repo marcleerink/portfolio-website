@@ -1,25 +1,3 @@
-# Marc Leerink's Porfolio
-
-## Description
-
-This website is my personal portfolio which includes my portfolio as a software engineer and my portfolio as a sound artist. The purpose is to give a visual representation of my resume and previous work in both fields.
-
-## Getting Started
-
-- Make sure to install all requirements found in requirements.txt
-- Execute run.py
-
-## Authors
-Marc Leerink (marc.leerink@code.berlin) 
-
-## Version History
-
-- Version 1: Launch of the draft including 3 pages for small screens
-- Version 2: Made responsive and added a navbar
-- Version 3: transferred to Flask app, changed design
-- Version 4: Included authenthication and contact page
-
-
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
@@ -41,17 +19,11 @@ Marc Leerink (marc.leerink@code.berlin)
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/marcleerink/portfolio-website">
-    <img src="public/android-chrome-512x512.png" alt="Logo" width="150" height="150">
+    <img src="app/static/images/portfolio_website.png" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Portfolio Website</h3>
