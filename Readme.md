@@ -20,7 +20,17 @@
 
 ## About The Project
 
-My personal porfolio website containing my coding and sound projects.
+### Pages
+- Landing Page
+    - Software Engineer
+        - Projects
+    - Sound
+        - Projects
+    - Contact
+        - Sign up
+        - Log In
+        - Profile
+        - Contact
 ### Features
 - Login/Authentication
     - Register
