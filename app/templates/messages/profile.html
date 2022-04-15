@@ -5,10 +5,6 @@
 {% block stylesheet %}<link rel="stylesheet" href="../static/css/form.css">{% endblock %}
 
 {% block body %}
-<section class="header">
-    <h1>Marc Leerink</h1>
-    <h2>Software Engineer • Sound Artist</h2>
-</section>
 <nav class="navbar">
     <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
     {% if current_user.is_authenticated %}

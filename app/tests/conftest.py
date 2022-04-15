@@ -11,4 +11,4 @@ def client():
 
     with app.app_context():
         upgrade()
-    yield app.test_client()
+        yield app.test_client()

@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
-{% block title %}Sound Artist - Marc Leerink{% endblock %}
+{% block title %}Sound - Marc Leerink{% endblock %}
+
 {% block stylesheet %}<link rel="stylesheet" href="../static/css/sound_artist.css">{% endblock %}
+
 {% block body %}
-    <section class="header">
-      <h1>Altjira</h1>
-      <h2>Sound artist</h2>
-    </section>
+   
     <nav class="navbar">
         <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
         <a class= "nav_button" href={{url_for('software_engineer.software_engineer')}}>Software Engineer</a>

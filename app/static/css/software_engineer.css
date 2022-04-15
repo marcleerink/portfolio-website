@@ -53,6 +53,7 @@
 .links_wrap {
     margin:12px;
 }
+
 @media (min-width: 700px) {
     .out_links {
         justify-content: center;

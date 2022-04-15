@@ -6,7 +6,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from .models import Message, User
 from flask_login import LoginManager, login_required, login_user, current_user, logout_user
 import smtplib
-from flask_mail import Mail
 from app.config import MAIL_PORT, MAIL_SERVER, MY_EMAIL, MY_EMAIL_PW
 
 
@@ -18,26 +17,38 @@ def get_signup():
 
 @blueprint.post('/sign-up')
 def post_signup():
-    #create a user
+    # get input from form
     name = request.form.get('name')
     email = request.form.get('email')
     password = request.form.get('password')
     confirm_password = request.form.get('confirm_password')
 
+    # validate input lenght for database record/security 
+    if len(name) > 119:
+        flash('Name input too long')
+        return redirect(url_for('messages.get_signup'))
+    elif len(password) > 119:
+        flash('Password input too long')
+        return redirect(url_for('messages.get_signup'))
+    elif len(password) < 8:
+        flash('Password must be 8 or more characters')
+        return redirect(url_for('messages.get_signup'))
+
+    # validate password
     if password !=confirm_password:
         flash('Passwords not identical, try again')
         return redirect(url_for('messages.get_signup'))
-
+    
+    # validate if user already exists
     user = User.query.filter_by(email=email).first()
-
     if user:
         flash('Email already exists. Do you have an account already?')
         return redirect(url_for('messages.get_signup'))
-
-    new_user = User(name=name, email=email, password=generate_password_hash(password, method='sha256'))
-    new_user.save()
-
-    return render_template('messages/login.html')
+    else:
+        # create user
+        new_user = User(name=name, email=email, password=generate_password_hash(password, method='sha256'))
+        new_user.save()
+        return redirect(url_for('messages.get_login'))
 
 
 @blueprint.get('/log-in')
@@ -46,18 +57,17 @@ def get_login():
 
 @blueprint.post('/log-in')
 def post_login():
+    # get input from form
     email = request.form.get('email')
     password = request.form.get('password')
-    remember = True if request.form.get('remember') else False
-
-    user = User.query.filter_by(email=email).first()
     
     #check if user exists
     #compare passwords with database
+    user = User.query.filter_by(email=email).first()
     if not user or not check_password_hash(user.password, password):
         flash ('Incorrect email or password, try again, ')
         return redirect(url_for('messages.get_login'))
-    login_user(user, remember=remember)
+    login_user(user)
     return redirect(url_for('messages.profile'))
 
 @blueprint.route('/log-out')

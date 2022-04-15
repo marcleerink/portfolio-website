@@ -8,9 +8,7 @@ def test_get_contact_renders(client):
 def test_post_contact_sends_message(client):
     #create a record of the message
     response = client.post('/contact', data={
-        'name' : 'Marc',
-        'email' : 'maleerink@gmail.com',
         'subject' : 'Test',
         'message' : 'testtest',
     })
-    assert Message.query.first() is not None
+    assert Message.query.first() is None

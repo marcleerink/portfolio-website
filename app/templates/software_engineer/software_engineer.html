@@ -3,14 +3,11 @@
 {% block title %}Software Engineer - Marc Leerink{% endblock %}
 
 {% block stylesheet %}<link rel="stylesheet" href="../static/css/software_engineer.css">{% endblock %}
+
 {% block body %}
-<section class="header">
-    <h1>Marc Leerink</h1>
-    <h2>Software Engineer</h2>
-</section>
 <nav class="navbar">
     <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
-    <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Sound Artist</a>
+    <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Sound</a>
     <a class= "nav_button" href={{url_for('messages.get_contact')}}>Contact</a>
 </nav>
 <div class="main_background">
@@ -23,17 +20,16 @@
         <p class="text_align_left">
             I study Software Engineering at CODE University and have experience with Full-Stack Web Development
             <br>I am currently looking for a working student position to complement my learning journey.
+    
         </p>
-
-        <h2><br>Skills</h2>
+        <h2>Skills</h2>
         <p class="text_align_left"><i class="fa-brands fa-html5"></i> HTML
         <br><i class="fa-brands fa-css3-alt"></i> CSS 
         <br><i class="fa-brands fa-js-square"></i> JavaScript 
         <br><i class="fa-brands fa-python"></i> Python with Flask
         </p> 
         
-        <p class="text_align_left">
-            <br>I have a background in organizing music events and managing a music radio whilst producing and DJing on the side as well as advising clients in healthcare.
+        <p class="text_align_left"> I have a background in organizing music events and managing a music radio whilst producing and DJing on the side as well as advising clients in healthcare.
             <br>My character would be best described as curious, communicative and creative. Furthermore, I possess strong analytical thinking skills and work solution-oriented with high attention to detail.
         </p>
     </section>
@@ -42,8 +38,8 @@
         <div class ="project_button"> 
             <div class="project_content">
             <a href="/projects/{{ project.slug }}">
-                <h2>{{ project.title }}</h2>
-                <img class="project_image" src="../static/images/html.png" alt="project_photo">
+                <h2 class="project_title">{{ project.title }}</h2>
+                <img class="project_image" src='{{ project.image_url }}' alt="project_photo">
                 <p class="text_align_left">{{ project.content }}</p>
             </a>
             </div>

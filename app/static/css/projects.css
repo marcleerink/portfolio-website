@@ -21,6 +21,9 @@
         transform: scale(1.02);
         transition: all 700ms ease;
 }
+.project_title {
+    margin-top:16px;
+}
 .project_content {
     display: flex;
     flex-flow: column nowrap;

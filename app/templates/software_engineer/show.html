@@ -1,21 +1,20 @@
 {% extends 'base.html' %}
 
 {% block title %}{{ projects.title }} {% endblock %}
+
 {% block stylesheet %}<link rel="stylesheet" href="../static/css/projects.css">{% endblock %}
+
 {% block body %}
-<section class="header">
-    <h1>Marc Leerink</h1>
-    <h2>Software Engineer • Sound Artist</h2>
-</section>
 <nav class="navbar">
     <a class= "nav_button" href={{url_for('software_engineer.software_engineer')}}>Software Engineer</a>
     <a class= "nav_button" href={{url_for('software_engineer.project')}}>All projects</a>
 </nav>
 <section class="projects_container">
     <div class="project_content">
-        <img class="project_image" src="../static/images/html.png" alt="project_photo">
-        <h2> {{ projects.title }} </h2>
+        <img class="project_image" src='{{ projects.image_url }}' alt="project_photo">
+        <h2 class="project_title"> {{ projects.title }} </h2>
         <p>{{ projects.content }}</p>
+        <a class="out_button" onclick=" window.open('{{ projects.code_link }}','_blank')"><i class="fa-brands fa-github"></i> </a>
     </div>
 </section>
 <div class="links">

@@ -5,10 +5,6 @@
 {% block stylesheet %}<link rel="stylesheet" href="../static/css/form.css">{% endblock %}
 
 {% block body %}
-<section class="header">
-    <h1>Marc Leerink</h1>
-    <h2>Software Engineer • Sound Artist</h2>
-  </section>
   <nav class="navbar">
     <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
     {% if current_user.is_authenticated %}
@@ -20,7 +16,7 @@
     <form action="/contact" class="form" method="post" autocomplete="on">
         <ul>
             <h2> Hi there, {{ name }}</h2>
-            <p>Please write me a message and I will get back to you</p>
+            <li><br>Please write me a message and I will get back to you</li>
             <li>Your Email: {{ email }}</li>
             {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -36,7 +32,7 @@
                 <datalist id="subjects">
                     <option value="General">
                     <option value="Software Engineer">
-                    <option value="Sound Artist">
+                    <option value="Sound">
                   </datalist>
             </li>
             <li>
