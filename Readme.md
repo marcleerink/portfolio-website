@@ -32,13 +32,16 @@
         - Profile
         - Contact
 ### Features
-- Login/Authentication
+- Session based authentication
     - Register
     - Login
 - Messaging
     - Send message
     - View sent messages
 - Responsive design
+
+### To do
+- Implement jukebox with own music productions
 ### Built With
 
 - Python/Flask
