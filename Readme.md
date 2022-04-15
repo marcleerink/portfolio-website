@@ -51,7 +51,8 @@
    git clone https://github.com/marcleerink/portfolio-website.git
    ```
 2. Create virtual environment
-   Linux/MacOS:
+   
+   inux/MacOS:
    ```sh
    python3 -m venv venv
    ```
@@ -60,6 +61,7 @@
    py -3 -m venv venv
    ```
 3. Activate virtual environment
+   
    Linux/MacOS:
    ```sh
    venv/bin/activate
