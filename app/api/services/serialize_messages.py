@@ -7,7 +7,7 @@ def serialize_users(users):
             'name':user.name,
             'email': user.email,
             'password': user.password,
-            'messages': serialize_messages(user.messages),
+            'messages_sent': serialize_messages(user.messages_sent),
         })
 
     return users_list
@@ -20,6 +20,7 @@ def serialize_messages(messages):
             'id': message.id,
             'subject': message.subject,
             'message': message.message,
+            'timestamp': message.timestamp,
         })
     
     return messages_list

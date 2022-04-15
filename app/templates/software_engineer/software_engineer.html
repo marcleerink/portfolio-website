@@ -10,11 +10,11 @@
     <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Sound</a>
     <a class= "nav_button" href={{url_for('messages.get_contact')}}>Contact</a>
 </nav>
-<div class="main_background">
+<div tabindex="0" class="main_background">
 <div class="main_background2">
 </div>
 </div>
-    <section class="body">
+    <section tabindex="0" class="body">
         <h2> Hi, I am Marc Leerink</h2>
         <h3> <br>A passionate tech and music lover from the Netherlands, living in Berlin.</h3>
         <p class="text_align_left">
@@ -35,27 +35,29 @@
     </section>
     <section class="projects_container">
         {% for project in project_pagination.items %}
-        <div class ="project_button"> 
+        <div class ="project_contain"> 
             <div class="project_content">
             <a href="/projects/{{ project.slug }}">
                 <h2 class="project_title">{{ project.title }}</h2>
                 <img class="project_image" src='{{ project.image_url }}' alt="project_photo">
                 <p class="text_align_left">{{ project.content }}</p>
             </a>
+                <a tabindex="0" class="project_button" onclick=" window.open('{{ project.link }}','_blank')"><i class="fa-solid fa-arrow-up-right-from-square"></i> View project</a>
+                <a tabindex="0" class="project_button" onclick=" window.open('{{ project.code_link }}','_blank')"><i class="fa-brands fa-github"></i> View on GitHub</a>
             </div>
         </div> 
         {% endfor %}
     </section>
     <section class="links_wrap">
-        <div class="project_button">
+        <div class="project_contain">
             <div class="project_content">
                 <a class="out_button" href={{url_for('software_engineer.project')}}> All Projects</a>
             </div>
         </div>
         <div class="out_links">
             <a class="out_button" href={{url_for('simple_pages.cv')}}>CV</a>
-            <a class="out_button" onclick=" window.open('https://github.com/marcleerink','_blank')"><i class="fa-brands fa-github"></i> </a>
-            <a class="out_button" onclick=" window.open('https://www.linkedin.com/in/marc-leerink-82b83b121/','_blank')" ><i class="fa-brands fa-linkedin"></i></a>
+            <a class="out_button" tabindex="0" onclick=" window.open('https://github.com/marcleerink','_blank')"><i class="fa-brands fa-github"></i> </a>
+            <a class="out_button" tabindex="0" onclick=" window.open('https://www.linkedin.com/in/marc-leerink-82b83b121/','_blank')" ><i class="fa-brands fa-linkedin"></i></a>
         </div>  
         <div class="links">
             <a class= "button2" href={{url_for('software_engineer.project')}}> Projects</a>

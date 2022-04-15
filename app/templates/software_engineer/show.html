@@ -10,11 +10,14 @@
     <a class= "nav_button" href={{url_for('software_engineer.project')}}>All projects</a>
 </nav>
 <section class="projects_container">
-    <div class="project_content">
-        <img class="project_image" src='{{ projects.image_url }}' alt="project_photo">
-        <h2 class="project_title"> {{ projects.title }} </h2>
-        <p>{{ projects.content }}</p>
-        <a class="out_button" onclick=" window.open('{{ projects.code_link }}','_blank')"><i class="fa-brands fa-github"></i> </a>
+    <div class ="project_contain"> 
+        <div class="project_content">
+            <img class="project_image" src='{{ projects.image_url }}' alt="project_photo">
+            <h2 tabindex="0" class="project_title"> {{ projects.title }} </h2>
+            <p> {{ projects.content }}</p>
+            <a tabindex="0" class="project_button" onclick=" window.open('{{ projects.link }}','_blank')"><i class="fa-solid fa-arrow-up-right-from-square"></i> View project</a>
+            <a tabindex="0" class="project_button" onclick=" window.open('{{ projects.code_link }}','_blank')"><i class="fa-brands fa-github"></i> View on GitHub</a>
+        </div>
     </div>
 </section>
 <div class="links">

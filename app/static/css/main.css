@@ -75,6 +75,7 @@ button {
 .text_align_left {
     text-align: justify;
     align-self: center;
+    justify-self: center;
 }
 .header {
     display: flex;
@@ -160,7 +161,7 @@ button {
     opacity: 0.8;
     cursor: pointer;
 }
-    .button2:hover, .button2:active {
+    .button2:hover, .button2:active, .background2:focus {
         transform: scale(1.05);
         opacity: 1;
         transition: all 500ms ease;
@@ -227,7 +228,7 @@ button {
         
     }
 
-    .background1:hover .out_links{
+    .background1:hover .out_links {
         display: flex;
         flex-flow: row, nowrap;
         justify-content: center;

@@ -1,6 +1,6 @@
 
 .main_background {
-    background-image: url('../images/cvphoto-edit.png');
+    background-image: url('../images/cvphoto.png');
     background-position: 50% 20%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,7 +19,19 @@
     display:none;
 }
 .project_button {
+    cursor:pointer;
+    margin:6px;
+    font-size: min(4vw, 16px);
+    color: black;
+    font-weight: normal;
+    text-align: center;
+}
+
+.project_contain{
     display:none;
+}
+.project_title {
+    margin:16px;
 }
 .out_links {
     display: flex; 
@@ -79,14 +91,14 @@
 
 
     }
-    .project_button {
+    .project_contain {
         display:flex;
         justify-content: center;
         flex-basis:33%;
         justify-self: center;
         margin: 0px;
     }
-        .project_button:hover {
+        .project_contain:hover {
             transform: scale(1.02);
             transition: all 700ms ease;
         }
