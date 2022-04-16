@@ -5,14 +5,7 @@
 html{
     box-sizing: border-box;
 }
-h1 {
-    font-family: raleway, Helvetica, sans-serif;
-    font-size: min(10vw, 60px);
-    text-align: center;
-    font-weight: bolder;
-    color: black;
-    margin: 0;
-  }
+
 h2 {
     font-family: raleway, Helvetica, sans-serif;
     font-size: min(5vw, 24px);
@@ -93,15 +86,15 @@ button {
 .header1 {
     text-align: left;
     font-family: raleway, Helvetica, sans-serif;
-    font-size: 48.83px;
-    font-weight: bolder;
+    font-size: 2.441rem;
+    font-weight: bold;
     color: black;
     margin: 0;
 }
 .header2 {
     text-align:left;
     font-family: raleway, Helvetica, sans-serif;
-    font-size: 23.5px;
+    font-size: 1.18rem;
     font-weight: bold;
     color: black;
     margin: 0;
