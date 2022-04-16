@@ -6,6 +6,7 @@
     align-items: center;
     background: rgb(255, 243, 210);
     padding: 16px;
+    margin-top:8px;
     
 
 }
@@ -33,6 +34,7 @@
     align-self: center;
     justify-self: center;
     width:50%;
+    border-radius: 10px;
 }
     .project_image:hover {
         transform: scale(1.02);
@@ -41,11 +43,11 @@
     }
 .project_button {
     cursor:pointer;
-    margin:6px;
-    font-size: min(4vw, 16px);
-    color: black;
-    font-weight: normal;
-    text-align: center;
+    display:flex;
+    justify-content: center;
+    justify-self:center;
+    margin-top: 16px;
+    margin-bottom: 0px;
 }
 
 @media (min-width: 700px) {

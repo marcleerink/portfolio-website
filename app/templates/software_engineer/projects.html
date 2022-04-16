@@ -47,11 +47,11 @@
 </section>
 <nav class="page_nav">
     {% if project_pagination.has_prev %}
-        <a class= "nav_button" href="/projects?page={{ project_pagination.prev_num }}">Previous Page</a>
+        <a class= "project_button" href="/projects?page={{ project_pagination.prev_num }}">Previous Page</a>
     {% endif %}
 
     {% if project_pagination.has_next %}
-        <a class= "nav_button" href="/projects?page={{ project_pagination.next_num }}">Next Page</a>
+        <a class= "project_button" href="/projects?page={{ project_pagination.next_num }}">Next Page</a>
     {% endif %}
     
   </nav>

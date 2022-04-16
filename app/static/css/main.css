@@ -86,16 +86,16 @@ button {
 .header1 {
     text-align: left;
     font-family: raleway, Helvetica, sans-serif;
-    font-size: 2.441rem;
-    font-weight: bold;
+    font-size: 7vw;
+    font-weight: 500;
     color: black;
     margin: 0;
 }
 .header2 {
     text-align:left;
     font-family: raleway, Helvetica, sans-serif;
-    font-size: 1.18rem;
-    font-weight: bold;
+    font-size: 3.38vw;
+    font-weight: 500;
     color: black;
     margin: 0;
     padding: 0;
@@ -122,7 +122,8 @@ button {
         gap:0%;
         justify-self: center;
         justify-content:center;
-        margin:12px 0px;
+        font-weight: 500;
+        margin:12px 12px;
         
         border-radius: 20px;
 
@@ -142,7 +143,7 @@ button {
     border: 0;
     color: black;
     cursor: pointer;
-    font-size: 39.06px;
+    font-size: 8vw;
     width:fit-content;
 }
     .hamburger:focus {
@@ -154,7 +155,7 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
     height:80vh;
-    margin-top:16px;
+    margin-top:8px;
     
 }
 .backgroundcontainer {
@@ -221,7 +222,7 @@ button {
     text-decoration: none;
     background-color: rgb(255, 243, 210); 
     border-radius: 20px;
-    width: max(100vw, 24px);
+    width: max(50vw, 24px);
     opacity: 0.8;
     cursor: pointer;
 }
@@ -250,8 +251,14 @@ button {
 }
 
 @media screen and (min-width: 700px) {
-    .button2 {
-        width: max(50vw, 24px);
+    .header1 {
+        font-size: 48.83px;
+    }
+    .header2 {
+        font-size: 23.52px;
+    }
+    .hamburger {
+        font-size: 5vw;
     }
 }
 @media screen and (min-width: 900px) {

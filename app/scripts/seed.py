@@ -7,8 +7,8 @@ app.app_context().push()
 
 # project1
 project1_title = 'Portfolio Website'
-project1_content = 'The portfolio website you are on right now. The frontend is build with custom HTML/CSS and JavaScript. The backend with Python/Flask.'
-project1_link = '#'
+project1_content = 'The portfolio website you are on right now. The frontend is build with custom HTML,CSS and JavaScript. The backend with Python/Flask.'
+project1_link = 'https://marcleerink.herokuapp.com/'
 project1_code_link = 'https://github.com/marcleerink/portfolio-website'
 project1_image = '../static/images/portfolio_website.png'
 
