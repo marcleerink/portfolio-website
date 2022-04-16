@@ -74,6 +74,7 @@ button {
     justify-content: space-between;
     flex-flow:row wrap;
     overflow:hidden;
+    margin:0px;
 }
 .header {
     display: flex;
@@ -86,16 +87,16 @@ button {
 .header1 {
     text-align: left;
     font-family: raleway, Helvetica, sans-serif;
-    font-size: 7vw;
-    font-weight: 500;
+    font-size: 8vw;
+    font-weight: 600;
     color: black;
     margin: 0;
 }
 .header2 {
     text-align:left;
     font-family: raleway, Helvetica, sans-serif;
-    font-size: 3.38vw;
-    font-weight: 500;
+    font-size: 3.88vw;
+    font-weight: 600;
     color: black;
     margin: 0;
     padding: 0;
@@ -145,6 +146,7 @@ button {
     cursor: pointer;
     font-size: 8vw;
     width:fit-content;
+    margin-right:0px;
 }
     .hamburger:focus {
         outline:none;
