@@ -68,7 +68,7 @@ def post_login():
         flash ('Incorrect email or password, try again, ')
         return redirect(url_for('messages.get_login'))
     login_user(user)
-    return redirect(url_for('messages.profile'))
+    return redirect(url_for('messages.get_contact'))
 
 @blueprint.route('/log-out')
 @login_required
@@ -112,7 +112,9 @@ def post_contact():
             server.login(MY_EMAIL, MY_EMAIL_PW)
             server.sendmail(MY_EMAIL, MY_EMAIL, current_user.email + subject + message)
             flash('Message sent!')
+            return render_template('messages/contact_form.html', name = current_user.name, email = current_user.email)
         except smtplib.SMTPException:
             flash('Unable to send mail')
+            return render_template('messages/contact_form.html', name = current_user.name, email = current_user.email)
             
-    return render_template('messages/contact_form.html', name = current_user.name, email = current_user.email)
+    

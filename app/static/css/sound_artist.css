@@ -16,6 +16,9 @@
     margin-top:12px;
     margin-bottom: 0px;
 }
+.sc-wrapper.active {
+    display:flex;
+}
 
 .out_links{
     display: flex; 

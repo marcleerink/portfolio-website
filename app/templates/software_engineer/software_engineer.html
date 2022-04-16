@@ -3,13 +3,19 @@
 {% block title %}Software Engineer - Marc Leerink{% endblock %}
 
 {% block stylesheet %}<link rel="stylesheet" href="../static/css/software_engineer.css">{% endblock %}
-
-{% block body %}
-<nav class="navbar">
+{% block navbar %}
+<nav class="navbar" id="navbar">
     <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
+    <a class= "nav_button" href={{url_for('software_engineer.software_engineer')}}>Software Engineer</a>
     <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Sound</a>
     <a class= "nav_button" href={{url_for('messages.get_contact')}}>Contact</a>
+    {% if current_user.is_authenticated %}
+    <a class= "nav_button" href={{url_for('messages.logout')}}>Log Out</a>
+    {% endif %}
 </nav>
+ {% endblock %}
+{% block body %}
+
 <div tabindex="0" class="main_background">
 <div class="main_background2">
 </div>

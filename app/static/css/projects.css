@@ -4,10 +4,9 @@
     justify-items: center;
     flex-flow: row wrap;
     align-items: center;
-    justify-tracks: center;
     background: rgb(255, 243, 210);
     padding: 16px;
-    margin: 16px;
+    
 
 }
 .project_contain {
