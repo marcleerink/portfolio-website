@@ -13,8 +13,12 @@
     background-size: contain; 
     height: 100%;
     opacity: 0.1    ;
-    
 }
+    .main_background2:hover, .main_background2:active {
+        opacity: 0.0;
+        transform: var(--transform);
+        transition: var(--transition);
+    }
 .projects_container{
     display:none;
 }
@@ -61,8 +65,8 @@
         justify-items: center;
         flex-flow: row nowrap;
         align-items: stretch;
-        padding: 16px;
-        margin-top: 16px;
+        margin: var(--bottom-margin);
+    
 
 
     }

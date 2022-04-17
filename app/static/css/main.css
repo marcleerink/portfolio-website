@@ -12,11 +12,11 @@
   --bg-color: #fcfcfc;
   --primary-color: #353535;
   --secondary-color: rgb(255, 243, 210);
-  --primary-shadow: rgb(199, 199, 199);
+  --primary-shadow: rgb(201, 201, 201);
   --secondary-shadow: rgb(189, 178, 142);
   --hover-color:black;
-  --bottom-margin: 12px;
-  --bottom-margin-2: 16px;
+  --bottom-margin: 16px;
+  --bottom-margin-2: 12px;
   --transition: all 500ms ease;
   --transform: scale(1.05)
 }
@@ -105,6 +105,12 @@ button {
     text-align: justify;
     align-self: center;
     justify-self: center;
+}
+.margin {
+    margin-bottom: var(--bottom-margin);
+}
+.margin2 {
+    margin-bottom:var(--bottom-margin-2);
 }
 
 /* Header */
@@ -304,7 +310,6 @@ button {
     display:flex;
     flex-flow: column wrap;
     align-content: center;
-    margin:16px;
     padding:16px;
 }
 
