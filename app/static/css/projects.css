@@ -17,7 +17,7 @@
     padding:16px;
     overflow:hidden;
     background-color: var(--secondary-color);
-    box-shadow: var(--primary-shadow);
+    box-shadow: var(--third-shadow);
     border-radius:20px;
 }
 

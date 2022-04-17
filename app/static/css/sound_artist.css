@@ -19,6 +19,7 @@
     flex-flow: column nowrap;
     align-items: space-around;
     justify-items: center;
+    align-content:center;
     background: var(--secondary-color);
     
     padding: 16px;

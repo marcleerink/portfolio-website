@@ -1,5 +1,6 @@
 .body, .form_wrap {
     display:flex;
+    font-family: var(--font-family);
     justify-content: center;
     margin: auto;
     margin-bottom: 0px;
@@ -17,7 +18,6 @@
     background-color: var(--secondary-color);
     box-shadow: var(--primary-shadow);
 }
-
 ul {
     text-align: center;
     list-style: none;
@@ -27,6 +27,7 @@ ul {
 
 form li + li {
     margin-top: 16px;
+    font-family: var(--font-family);
 }
 
 
@@ -44,6 +45,7 @@ input:focus,textarea:focus {
 }
 
 textarea {
+    font-family: var(--font-family);
     vertical-align: top;
     height: 5em;
 }
@@ -53,8 +55,40 @@ textarea {
         transition: var(--transition);
     
     }
+.button3 {
+    font-weight: var(--normal-font);
+    font-family: var(--font-family);
+    cursor: pointer;
+    color: var(--primary-color);
+}
 
-@media (min-width: 700px) {
+/* Profile Page */
+.message_contain {
+    display:flex;
+    flex-flow:column nowrap;
+    width:95vw;
+}
+.message {
+    display: flex;
+    flex-flow: column nowrap;
+    gap:12px;
+    margin:16px;
+    padding:16px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: var(--primary-shadow);
+}
+.profile_link{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.profile_button {
+    margin-top:16px;
+    margin-bottom: 0px;
+}
+
+@media screen and (min-width: 600px) {
     .form {
         width:54%;
     }
@@ -67,7 +101,16 @@ textarea {
     textarea {
         height: 10em;
         width:100%;
-
     }
-
+    .message_contain {
+        width:70vw;
+    }
+}
+@media screen and (min-width:900px) {
+    .profile_button {
+        flex-basis:15%;
+    }
+    .message_contain {
+        width:40vw;
+    }
 }

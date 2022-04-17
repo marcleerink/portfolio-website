@@ -16,22 +16,24 @@
 {% endblock %}
 {% block body %}
 <section class="body">
-    <div        tabindex="0" class="form">
-        <ul>
+    <div>
+        <ul class="message_contain">
             <h2> Hello {{ name }} </h2><br>
             <li> Email Address: {{ email }}</li><br>
             <li> Here is your messaging history: </li><br>
             {% for message in messages %}
+            <div tabindex="0" class="message">
             <li> Sent at: {{ message.timestamp }}</li> 
             <li> Subject: {{ message.subject }}</li> 
-            <li> Message:</li>
-            <li> {{ message.message }}</li><br>
+            <li> Message: {{ message.message }}</li>
+            </div>
             {% endfor %}
         </ul>
-        
     </div>
 </section>
-
+<div class="profile_link">
+    <a class= "button2 profile_button" href={{url_for('messages.get_contact')}}>Contact</a>
+</div>
 <section class="links">
     {% if current_user.is_authenticated %}
     <a class= "button2" href={{ url_for('messages.logout') }}>Log Out</a>

@@ -27,7 +27,7 @@
             <a tabindex="0" href="/projects/{{ project.slug }}">
                 <img class="project_image" src='{{ project.image_url }}' alt="project_photo">
             </a>
-            <p class="text_align_left">{{ project.content }}</p>
+            <p class="text_align_left center">{{ project.content }}</p>
             <div class="project_links">
                 <a tabindex="0" class="project_button" onclick=" window.open('{{ project.link }}','_blank')"><i class="fa-solid fa-arrow-up-right-from-square"></i> View project</a>
                 <a tabindex="0" class="project_button" onclick=" window.open('{{ project.code_link }}','_blank')"><i class="fa-brands fa-github"></i> View on GitHub</a>
@@ -37,15 +37,15 @@
     {% else %}
     <div class ="project_contain"> 
         <div class="project_content">
-        <a href="/projects/{{ project.slug }}">
             <h2 class="project_title">{{ project.title }}</h2>
-            <img class="project_image" src='{{ project.image_url }}' alt="project_photo">
-            <p class="text_align_left">{{ project.content }}</p>
+            <a tabindex="0" href="/projects/{{ project.slug }}"></a>
+                <img class="project_image" src='{{ project.image_url }}' alt="project_photo">
+            </a>
+            <p class="text_align_left center" class="center">{{ project.content }}</p>
             <div class="project_links">
                 <a tabindex="0" class="project_button" onclick=" window.open('{{ project.link }}','_blank')"><i class="fa-solid fa-arrow-up-right-from-square"></i> View project</a>
                 <a tabindex="0" class="project_button" onclick=" window.open('{{ project.code_link }}','_blank')"><i class="fa-brands fa-github"></i> View on GitHub</a>
             </div>
-        </a>
         </div>
     </div> 
     {% endif %}
