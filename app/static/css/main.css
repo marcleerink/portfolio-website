@@ -137,16 +137,17 @@ button {
     font-weight: var(--bold-font);
     color: var(--primary-color);
     margin: 0;
+    padding:0;
 }
 .header2 {
-    text-align:left;
+    text-align: justify;
     font-family: raleway, Helvetica, sans-serif;
     font-size: 3.83vw;
     font-weight: var(--bold-font);
     color: var(--primary-color);
     margin: 0;
     padding: 0;
-    width:fit-content
+    
 }
 
 /* Navbar */
@@ -277,7 +278,7 @@ button {
     cursor: pointer;
     box-shadow: 0 1px 2px var(--primary-shadow);
 }
-    .button2:hover, .button2:active, .background2:focus {
+    .button2:hover, .button2:active, .out_button:hover, .out_button:active {
         transform: var(--transform);
         opacity: 1;
         transition: var(--transition);

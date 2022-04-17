@@ -6,7 +6,6 @@
 {% block navbar %}
 <nav class="navbar" id="navbar">
     <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
-    <a class= "nav_button" href={{url_for('software_engineer.software_engineer')}}>Software Engineer</a>
     <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Sound</a>
     <a class= "nav_button" href={{url_for('messages.get_contact')}}>Contact</a>
     {% if current_user.is_authenticated %}
@@ -48,8 +47,10 @@
                 <img class="project_image" src='{{ project.image_url }}' alt="project_photo">
                 <p class="text_align_left">{{ project.content }}</p>
             </a>
-                <a tabindex="0" class="project_button" onclick=" window.open('{{ project.link }}','_blank')"><i class="fa-solid fa-arrow-up-right-from-square"></i> View project</a>
-                <a tabindex="0" class="project_button" onclick=" window.open('{{ project.code_link }}','_blank')"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                <div class="project_links">
+                    <a tabindex="0" class="project_button" onclick=" window.open('{{ project.link }}','_blank')"><i class="fa-solid fa-arrow-up-right-from-square"></i> View project</a>
+                    <a tabindex="0" class="project_button" onclick=" window.open('{{ project.code_link }}','_blank')"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
             </div>
         </div> 
         {% endfor %}

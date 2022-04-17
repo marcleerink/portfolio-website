@@ -31,7 +31,7 @@
     display:none;
 }
 .project_title {
-    margin:16px;
+    margin-bottom:16px;
 }
 .out_links {
     display: flex; 
@@ -72,6 +72,7 @@
         flex-basis:33%;
         justify-self: center;
         align-items: space-between;
+        align-content:space-between;
         height:inherit;
         margin: 0px;
         padding:16px;
@@ -89,18 +90,23 @@
         flex-flow: column nowrap;
         align-items: space-around;
         justify-items: space-around;
+        justify-content:space-between;
         
     }   
-    .project_link {
-        font-size: min(5vw, 20px);
+    .project_links {
+        display: flex;
+        justify-content: space-around;
+    }
+    .project_button{
+
         font-weight: var(--normal-font);
         color: var(--primary-color);
         justify-self: top;
         text-align: center;
         text-decoration: none;
-        margin:0px;
+        margin-top:16px;
     }
-        .project_link:hover {
+        .project_button:hover {
             transform: var(--transform);
             transition: var(--transition);
         }
@@ -109,6 +115,7 @@
         height:150px;
         object-fit: cover;
         border-radius: 10px;
+        margin-bottom: 12px;
 
     }
     .projects {

@@ -28,8 +28,10 @@
                 <img class="project_image" src='{{ project.image_url }}' alt="project_photo">
             </a>
             <p class="text_align_left">{{ project.content }}</p>
-            <a tabindex="0" class="project_button" onclick=" window.open('{{ project.link }}','_blank')"><i class="fa-solid fa-arrow-up-right-from-square"></i> View project</a>
-            <a tabindex="0" class="project_button" onclick=" window.open('{{ project.code_link }}','_blank')"><i class="fa-brands fa-github"></i> View on GitHub</a>
+            <div class="project_links">
+                <a tabindex="0" class="project_button" onclick=" window.open('{{ project.link }}','_blank')"><i class="fa-solid fa-arrow-up-right-from-square"></i> View project</a>
+                <a tabindex="0" class="project_button" onclick=" window.open('{{ project.code_link }}','_blank')"><i class="fa-brands fa-github"></i> View on GitHub</a>
+            </div>
         </div>
     </div> 
     {% else %}
@@ -39,6 +41,10 @@
             <h2 class="project_title">{{ project.title }}</h2>
             <img class="project_image" src='{{ project.image_url }}' alt="project_photo">
             <p class="text_align_left">{{ project.content }}</p>
+            <div class="project_links">
+                <a tabindex="0" class="project_button" onclick=" window.open('{{ project.link }}','_blank')"><i class="fa-solid fa-arrow-up-right-from-square"></i> View project</a>
+                <a tabindex="0" class="project_button" onclick=" window.open('{{ project.code_link }}','_blank')"><i class="fa-brands fa-github"></i> View on GitHub</a>
+            </div>
         </a>
         </div>
     </div> 
@@ -47,16 +53,16 @@
 </section>
 <nav class="page_nav">
     {% if project_pagination.has_prev %}
-        <a class= "out_button" href="/projects?page={{ project_pagination.prev_num }}">Previous Page</a>
+        <a class= "button2" href="/projects?page={{ project_pagination.prev_num }}">Previous Page</a>
     {% endif %}
 
     {% if project_pagination.has_next %}
-        <a class= "out_button" href="/projects?page={{ project_pagination.next_num }}">Next Page</a>
+        <a class= "button2" href="/projects?page={{ project_pagination.next_num }}">Next Page</a>
     {% endif %}
     
 </nav>
 <nav class="links">
-    <a class= "button2" href={{url_for('software_engineer.software_engineer')}}>Software Engineer</a>
+    <a class= "button2" id="hide" href={{url_for('software_engineer.software_engineer')}}>Software Engineer</a>
 </nav>
         
   {% endblock %}

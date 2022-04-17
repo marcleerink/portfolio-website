@@ -1,20 +1,19 @@
 .projects_container{
     display:flex;
-    justify-content: space-between;
-    justify-items: center;
     justify-content: center;
+    justify-items: center;
     flex-flow: row wrap;
     align-items: stretch;
     padding: 16px;
-    margin-top: 16px;
     
-
+}
+#center {
+    justify-content: center;
 }
 .project_contain {
     flex-basis:100%;
     justify-self: center;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-bottom: 16px;
     padding:16px;
     overflow:hidden;
     background-color: var(--secondary-color);
@@ -23,16 +22,14 @@
 }
 
 .project_title {
-    margin:16px;
+    margin-bottom:16px;
 }
 .project_content {
     display: flex;
-    width:fit-content;
     flex-flow: column nowrap;
-    align-content: center;
-    
-   
-   
+    align-items: space-around;
+    justify-items: space-around;
+    justify-content:space-between;
 }   
 
 .project_image {
@@ -40,12 +37,18 @@
     justify-self: center;
     width:50%;
     border-radius: 10px;
+    margin-bottom: 12px;
 }
     .project_image:hover {
         transform: var(--transform);
         transition: var(--transition);
         cursor:pointer;
     }
+.project_links {
+    display: flex;
+    gap:16px;
+    justify-content: center;
+}
 .project_button {
     cursor:pointer;
     display:flex;
@@ -54,21 +57,32 @@
     margin-top: 16px;
     margin-bottom: 0px;
 }
+    .project_button:hover {
+        transform: var(--transform);
+        transition: var(--transition);
+}
 .page_nav {
     display:flex;
     justify-content: center;
     
 } 
+.button2 {
+    margin:0px;
+}
 
 
 @media (min-width: 600px) {
     .project_contain {
-        flex-basis: 70%
+        flex-basis: 80%
     }
     
 @media (min-width: 900px) {
+    .projects_container{
+        justify-content: space-between;
+    }
     .project_contain {
-        flex-basis: 45%
+        flex-basis: 45%;
+        gap: 16px;
     }
     .project_button {
         flex-basis: 30%;
@@ -79,7 +93,9 @@
         flex-grow: 1.5;
     }  
     .button2 {
-        margin:0px;
+        margin-bottom:16px;
+        margin-top:0px;
+        flex-basis:15%;
     }
     .links {
         display:flex;
