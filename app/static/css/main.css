@@ -267,7 +267,10 @@ button {
         transition: var(--transition);
         color: var(--hover-color);
 } 
-
+#no-shadow {
+    background-color: none;
+    box-shadow: none;
+}
 /* Links */
 .links {
     display: flex;
