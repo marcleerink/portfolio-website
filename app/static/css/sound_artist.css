@@ -3,7 +3,6 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 .sc-wrapper {
     display:none;
@@ -11,10 +10,12 @@
     align-items: space-around;
     justify-items: center;
     background: rgb(255, 243, 210);
-    width: 86%;
+    width: 95.5%;
     padding: 16px;
     margin-top:12px;
     margin-bottom: 0px;
+    border-radius: 10px;
+    box-shadow:8.0px 16.0px 16.0px var(--primary-shadow);
 }
 .sc-wrapper.active {
     display:flex;

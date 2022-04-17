@@ -78,7 +78,7 @@
         padding:16px;
         border-radius: 20px;
         background-color: var(--secondary-color);
-        box-shadow: 0 4px 5px var(--secondary-shadow);
+        box-shadow: 0 4px 5px var(--primary-shadow);
         
     }
         .project_contain:hover {
