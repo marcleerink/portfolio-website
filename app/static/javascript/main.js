@@ -7,10 +7,10 @@ hamburger.addEventListener('click', () => {
 });
 
 // Soundcloud Embed dropdown
-const scWrapper = document.querySelector("#sc-wrapper");
+const music_container = document.querySelector(".music_container");
 const dropdown = document.querySelector("#dropdown");
 
 dropdown.addEventListener('click', () => {
-    scWrapper.classList.toggle("active");
+    music_container.classList.toggle("active");
 });
 

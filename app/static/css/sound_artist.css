@@ -4,21 +4,28 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.sc-wrapper {
+.music_container {
     display:none;
+    flex-flow: column nowrap;
+    width:95.5%;
+    gap:16px;
+    
+}
+.music_container.active {
+    display:flex;
+}
+.sc-wrapper {
+    display:flex;
     flex-flow: column nowrap;
     align-items: space-around;
     justify-items: center;
-    background: rgb(255, 243, 210);
-    width: 95.5%;
+    background: var(--secondary-color);
+    
     padding: 16px;
     margin-top:12px;
     margin-bottom: 0px;
     border-radius: 10px;
     box-shadow:var(--third-shadow); 
-}
-.sc-wrapper.active {
-    display:flex;
 }
 
 .out_links{
@@ -51,6 +58,11 @@
     }
 }
 @media (min-width: 900px) {
+    .music_container {
+        display:flex;
+        flex-flow: row nowrap;
+        
+    }
     .sc-wrapper{
         display:flex;
         flex-flow: column nowrap;
