@@ -47,16 +47,16 @@
 </section>
 <nav class="page_nav">
     {% if project_pagination.has_prev %}
-        <a class= "project_button" href="/projects?page={{ project_pagination.prev_num }}">Previous Page</a>
+        <a class= "out_button" href="/projects?page={{ project_pagination.prev_num }}">Previous Page</a>
     {% endif %}
 
     {% if project_pagination.has_next %}
-        <a class= "project_button" href="/projects?page={{ project_pagination.next_num }}">Next Page</a>
+        <a class= "out_button" href="/projects?page={{ project_pagination.next_num }}">Next Page</a>
     {% endif %}
     
-  </nav>
-  <nav class="links">
+</nav>
+<nav class="links">
     <a class= "button2" href={{url_for('software_engineer.software_engineer')}}>Software Engineer</a>
-  </nav>
+</nav>
         
   {% endblock %}

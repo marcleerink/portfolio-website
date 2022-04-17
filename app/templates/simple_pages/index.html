@@ -12,7 +12,7 @@
     <a class= "nav_button" href={{url_for('messages.logout')}}>Log Out</a>
     {% endif %}
 </nav>
- {% endblock %}
+{% endblock %}
 
 {% block body %}
 
@@ -39,7 +39,7 @@
     </div>
 </section> 
 <section class="links">
-    <a class= "button2" href={{ url_for('messages.get_contact') }}>Contact</a>
+    <a class= "button2" href={{url_for('messages.get_contact')}}>Contact</a>
     {% if current_user.is_authenticated %}
     <a class= "button2" href={{ url_for('messages.logout') }}>Log Out</a>
     {% endif %}

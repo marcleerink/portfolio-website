@@ -22,7 +22,7 @@
     cursor:pointer;
     margin:6px;
     font-size: min(4vw, 16px);
-    color: black;
+    color: var(--primary-color);
     font-weight: normal;
     text-align: center;
 }
@@ -44,7 +44,6 @@
     padding: 16px;
     margin:12px;
     margin-top:0px;
-    justify-content: space-between;
     gap:20%;
     font-size: min(10vw, 24px);
     border-radius: 20px;
@@ -65,10 +64,13 @@
 .links_wrap {
     margin:12px;
 }
-
+.projects {
+    display:none;
+}
 @media (min-width: 700px) {
     .out_links {
         justify-content: center;
+        align-content: center;
         gap:3%;
     }
 }
@@ -84,8 +86,7 @@
         justify-content: space-around;
         justify-items: center;
         flex-flow: row nowrap;
-        align-items: center;
-        background: rgb(255, 243, 210);
+        align-items: stretch;
         padding: 16px;
         margin-top: 16px;
 
@@ -96,34 +97,53 @@
         justify-content: center;
         flex-basis:33%;
         justify-self: center;
+        align-items: space-between;
+        height:inherit;
         margin: 0px;
+        padding:16px;
+        border-radius: 20px;
+        background-color: var(--secondary-color);
+        box-shadow: 0 4px 4px var(--secondary-shadow);
+        
     }
         .project_contain:hover {
             transform: scale(1.02);
             transition: all 700ms ease;
         }
-      
     .project_content {
         display: flex;
         flex-flow: column nowrap;
-        align-items: center;
+        align-items: space-around;
+        justify-items: space-around;
         
     }   
     .project_link {
         font-size: min(5vw, 20px);
         font-weight: normal;
-        color: black;
+        color: var(--primary-color);
         justify-self: top;
         text-align: center;
         text-decoration: none;
         margin:0px;
     }
         .project_link:hover {
-            transform: scale(1.05);
-            transition: all 700ms ease;
+            transform: var(--transform);
+            transition: var(--transition);
         }
     .project_image {
         width:50%;
+        height:150px;
+        object-fit: cover;
         border-radius: 10px;
+
+    }
+    .projects {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items:center;
+    }
+    #projects {
+        flex-basis:20%;
     }
 }

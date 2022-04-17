@@ -4,7 +4,6 @@
     justify-items: center;
     flex-flow: row wrap;
     align-items: center;
-    background: rgb(255, 243, 210);
     padding: 16px;
     margin-top:8px;
     
@@ -24,6 +23,8 @@
 }
 .project_content {
     display: flex;
+    background-color: var(--secondary-color);
+    width:fit-content;
     flex-flow: column nowrap;
     align-content: center;
    
@@ -48,6 +49,11 @@
     justify-self:center;
     margin-top: 16px;
     margin-bottom: 0px;
+}
+.page_nav {
+    display:flex;
+    justify-content: center;
+    
 }
 
 @media (min-width: 700px) {
