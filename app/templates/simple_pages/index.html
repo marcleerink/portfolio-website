@@ -15,7 +15,13 @@
 {% endblock %}
 
 {% block body %}
-
+{% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                  <li>{{ message }} </li>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
 <section class="main_background">
     <div class="backgroundcontainer">
         <figure class='background1'>

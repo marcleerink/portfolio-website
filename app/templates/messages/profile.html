@@ -21,13 +21,22 @@
             <h2> Hello {{ name }} </h2><br>
             <li> Email Address: {{ email }}</li><br>
             <li> Here is your messaging history: </li><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                  <li>{{ message }} </li>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
             {% for message in messages %}
             <div tabindex="0" class="message">
             <li> Sent at: {{ message.timestamp }}</li> 
             <li> Subject: {{ message.subject }}</li> 
             <li> Message: {{ message.message }}</li>
+            <li><a class= "profile_button" href="{{ url_for('messages.delete_message', message_id=message.id) }}">Delete Message</a></li>
             </div>
             {% endfor %}
+            <li><a class= "button2 profile_button" href="{{ url_for('messages.delete_user', user_id=user.id) }}">Delete Account</a></li>
         </ul>
     </div>
 </section>

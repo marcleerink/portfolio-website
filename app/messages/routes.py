@@ -1,6 +1,3 @@
-# from email import message
-# from pyexpat.errors import messages
-import email
 from flask import Blueprint, render_template, request, url_for, redirect, flash, current_app
 from werkzeug.security import generate_password_hash, check_password_hash
 from .models import Message, User
@@ -48,7 +45,8 @@ def post_signup():
         # create user
         new_user = User(name=name, email=email, password=generate_password_hash(password, method='sha256'))
         new_user.save()
-        return redirect(url_for('messages.get_login'))
+        login_user(new_user)
+        return redirect(url_for('messages.get_contact'))
 
 
 @blueprint.get('/log-in')
@@ -80,9 +78,7 @@ def logout():
 @login_required
 def profile():
     messages = Message.query.filter_by(user_id= current_user.id).all()
-    # messages = current_user.messages_sent.order_by(Message.timestamp.desc())
-    
-    return render_template('messages/profile.html', name = current_user.name, email = current_user.email, messages = messages)
+    return render_template('messages/profile.html', name = current_user.name, email = current_user.email, messages = messages, user = current_user)
 
 
 @blueprint.get('/contact')
@@ -116,5 +112,37 @@ def post_contact():
         except smtplib.SMTPException:
             flash('Unable to send mail')
             return render_template('messages/contact_form.html', name = current_user.name, email = current_user.email)
-            
+
+@blueprint.route('/delete/<int:user_id>')
+@login_required
+def delete_user(user_id):
+    user_to_delete = User.query.get_or_404(user_id)
+    messages_user_delete = Message.query.filter_by(user_id=current_user.id).first()
+
+    try:
+        user_to_delete.delete()
+        messages_user_delete.delete()
+        flash("User and all messages deleted") 
+        return redirect(url_for('simple_pages.index'))
+
+    except:
+        flash('Unable to delete user')
+        return redirect(url_for('messages.profile'))
+
+@blueprint.route('/<int:message_id>/delete')
+@login_required
+def delete_message(message_id):
+    message_to_delete = Message.query.get_or_404(message_id)
+    try:
+        message_to_delete.delete()
+        flash("Message deleted") 
+        return redirect(url_for('messages.profile'))
+
+    except:
+        flash('Unable to delete message')
+        return redirect(url_for('messages.profile'))
+
+   
+
+
     
