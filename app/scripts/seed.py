@@ -15,7 +15,7 @@ project1_image = '../static/images/portfolio_website.png'
 # project2
 project2_title = 'Live Performance Leveler'
 project2_content = 'The Live Performance Leveler is a tool that can be used to automatically correct loudness of a live performance in real time. The Live Performance Leveler is software created in Max for Live. Please see the documentation with "View Project" for all information'
-project2_link = 'https://github.com/marcleerink/Live-Performance-Leveler/blob/main/Documentation%20Live%20Performance%20Leveler%20V1.0.pdf'
+project2_link = '../static/downloads/documentation_live_performance_leveler.pdf'
 project2_code_link = 'https://github.com/marcleerink/Live-Performance-Leveler'
 project2_image = '../static/images/live-performance-leveler.png'
 
@@ -37,7 +37,7 @@ projects_list = {
 
 
 for slug, project in projects_list.items():
-    new_project = Projects(slug=slug, title=project['title'], content=project['content'], code_link=project['code_link'], priority=project['priority'], image_url=project['image_url'])
+    new_project = Projects(slug=slug, title=project['title'], content=project['content'], link=project['link'], code_link=project['code_link'], priority=project['priority'], image_url=project['image_url'])
     db.session.add(new_project)
 
 db.session.commit()

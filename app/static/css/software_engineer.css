@@ -120,7 +120,7 @@
         }
     .project_image {
         height:150px;
-        width:100%;
+        max-width:100%;
         object-fit: contain;
         border-radius: 10px;
         margin-bottom: 12px;
