@@ -4,10 +4,8 @@
     justify-items: center;
     flex-flow: row wrap;
     align-items: stretch;
-    
     padding: 16px;
-    margin-left: 66px;
-    margin-right: 66px;
+    
     
 }
 #center {
@@ -87,6 +85,8 @@
 @media (min-width: 900px) {
     .projects_container{
         justify-content: space-between;
+        margin-left: 66px;
+        margin-right: 66px;
     }
     .project_contain {
         flex-basis: 45%;

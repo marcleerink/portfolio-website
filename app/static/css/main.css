@@ -9,7 +9,7 @@
   --normal-font: 400;
   --bold-font: 500;
   --bolder-font: 700;
-  --bg-color: rgb(251, 255, 248);
+  --bg-color: rgb(252, 255, 249);
   --primary-color: #282828;
   --secondary-color: rgb(252, 254, 222);
   --primary-shadow: rgba(93, 93, 50, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -320,6 +320,7 @@ button {
     
 }
 
+/* Footer */
 .footer {
     display:flex;
     justify-content:center;
@@ -340,6 +341,7 @@ button {
     border-radius: 20px;
     cursor: pointer;
     box-shadow:var(--secondary-shadow);
+    flex-basis:25%;
 }
 
 @media screen and (min-width: 600px) {
