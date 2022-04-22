@@ -119,32 +119,41 @@ def post_contact():
 @blueprint.route('/delete/<int:user_id>')
 @login_required
 def delete_user(user_id):
-    user_to_delete = User.query.get_or_404(user_id)
-    messages_user_delete = Message.query.filter_by(user_id=current_user.id).first()
-    
-    # check if user has messages in database and delete together with user
-    try:
-        if messages_user_delete != None:
-            messages_user_delete.delete()
-        user_to_delete.delete()
-        flash("User deleted") 
-        return redirect(url_for('simple_pages.index'))
+    if user_id == current_user.id:
+        user_to_delete = User.query.get_or_404(user_id)
+        messages_user_delete = Message.query.filter_by(user_id=current_user.id).first()
+        
+        # check if user has messages in database and delete together with user
+        try:
+            if messages_user_delete != None:
+                messages_user_delete.delete()
+            user_to_delete.delete()
+            flash("User deleted") 
+            return redirect(url_for('simple_pages.index'))
 
-    except:
-        flash('Unable to delete user')
+        except:
+            flash('Unable to delete user')
+            return redirect(url_for('messages.profile'))
+    else:
+        flash('Not authorized to delete this user')
         return redirect(url_for('messages.profile'))
 
 @blueprint.route('/<int:message_id>/delete')
 @login_required
 def delete_message(message_id):
+    user_id = current_user.id
     message_to_delete = Message.query.get_or_404(message_id)
-    try:
-        message_to_delete.delete()
-        flash("Message deleted") 
-        return redirect(url_for('messages.profile'))
+    if user_id == message_to_delete.user_id: 
+        try:
+            message_to_delete.delete()
+            flash("Message deleted") 
+            return redirect(url_for('messages.profile'))
 
-    except:
-        flash('Unable to delete message')
+        except:
+            flash('Unable to delete message')
+            return redirect(url_for('messages.profile'))
+    else:
+        flash("Not authorized to delete this post")
         return redirect(url_for('messages.profile'))
 
    
