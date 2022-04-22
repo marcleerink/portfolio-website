@@ -7,7 +7,9 @@
     <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
     <a class= "nav_button" href={{url_for('software_engineer.software_engineer')}}>Software Engineer</a>
     <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Sound</a>
-    <a class= "nav_button" href={{url_for('messages.get_contact')}}>Contact</a>
+    {% if current_user.is_authenticated == False %}
+    <a class= "nav_button" href={{url_for('messages.get_login')}}>Log In</a>
+    {% endif %}
     {% if current_user.is_authenticated %}
     <a class= "nav_button" href={{url_for('messages.logout')}}>Log Out</a>
     {% endif %}
@@ -18,7 +20,7 @@
 {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                  <li>{{ message }} </li>
+                  <li class="flash">{{ message }}</li>
                 {% endfor %}
               {% endif %}
             {% endwith %}
@@ -45,7 +47,9 @@
     </div>
 </section> 
 <section class="links">
-    <a class= "button2" href={{url_for('messages.get_contact')}}>Contact</a>
+    {% if current_user.is_authenticated == False %}
+    <a class= "button2" href={{url_for('messages.get_login')}}>Log In</a>
+    {% endif %}
     {% if current_user.is_authenticated %}
     <a class= "button2" href={{ url_for('messages.logout') }}>Log Out</a>
     {% endif %}

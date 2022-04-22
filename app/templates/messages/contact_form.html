@@ -18,21 +18,21 @@
 <section class="body form_wrap">
     <form action="/contact" class="form" method="post" autocomplete="on">
         <ul>
-            <h2> Hi there, {{ name }}</h2>
-            <li><br>Please write me a message and I will get back to you</li>
-            <li>Your Email: {{ email }}</li>
             {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                  <li>{{ message }} <br><br><a class= "nav_button" href={{ url_for('messages.profile') }}>My Account</a>
-                  </li>
+                  <li class="flash">{{ message }}</li>
                 {% endfor %}
               {% endif %}
             {% endwith %}
 
+            <h2> Hi there, {{ name }}</h2>
+            <li><br>Please write me a message and I will get back to you</li>
+            <li>Your Email: {{ email }}</li>
+            
             <li>
                 <input list="subjects" type="text"name="subject" id="subject" placeholder="Subject" value="{{
-                    request.form.subject }}" maxlenght="120" required autofocus>
+                    request.form.subject }}" required autofocus>
                 <datalist id="subjects">
                     <option value="General">
                     <option value="Software Engineer">
@@ -41,7 +41,7 @@
             </li>
             <li>
                 <textarea id="message" name="message" placeholder="Message" value="{{
-                    request.form.message }}"required maxlength="5000">
+                    request.form.message }}"required>
                 </textarea>
             </li>
             <li >
@@ -53,8 +53,8 @@
 <section class="links">
     {% if current_user.is_authenticated %}
     <a class= "button2" href={{ url_for('messages.profile') }}>My Account</a>
-    <a class= "button2" href={{ url_for('messages.logout') }}>Log Out</a>
+    <a class= "button2" id="hide" href={{ url_for('messages.logout') }}>Log Out</a>
     {% endif %}
-    <a class= "button2" href={{url_for('simple_pages.index')}}>Overview</a>
+    <a class= "button2" id="hide" href={{url_for('simple_pages.index')}}>Overview</a>
 </section>
 {% endblock %}

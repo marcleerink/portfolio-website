@@ -17,6 +17,7 @@
     font-size: min(4vw, 20px);
     background-color: var(--secondary-color);
     box-shadow: var(--primary-shadow);
+    margin-top:12px;
 }
 ul {
     text-align: center;
@@ -48,6 +49,7 @@ textarea {
     font-family: var(--font-family);
     vertical-align: top;
     height: 5em;
+    text-align: center;
 }
     button:active, button:hover {
         transform: var(--transform);
@@ -80,12 +82,14 @@ textarea {
 }
 .profile_link{
     display:flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 16px;
 }
 .profile_button {
     margin-top:16px;
     margin-bottom: 0px;
+
 }
 
 @media screen and (min-width: 600px) {
@@ -108,9 +112,22 @@ textarea {
 }
 @media screen and (min-width:900px) {
     .profile_button {
-        flex-basis:15%;
+        
+        width:20%;
     }
     .message_contain {
         width:40vw;
+    }
+    .links {
+        display:flex;
+    
+    }
+    #hide {
+        display:none;
+    }
+    .button2 {
+        margin: 0px;
+        margin-bottom:16px;
+        flex-basis:15%;
     }
 }

@@ -9,9 +9,9 @@
   --normal-font: 400;
   --bold-font: 500;
   --bolder-font: 700;
-  --bg-color: rgb(252, 252, 250);
-  --primary-color: #353535;
-  --secondary-color: rgb(255, 243, 212);
+  --bg-color: rgb(251, 255, 248);
+  --primary-color: #282828;
+  --secondary-color: rgb(252, 254, 222);
   --primary-shadow: rgba(93, 93, 50, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   --secondary-shadow: rgba(92, 93, 50, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   --third-shadow:rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -21,11 +21,13 @@
   --transition: all 500ms ease-out;
   --transform: scale(1.05)
 }
+/* rgb(255, 243, 212); */
 
 /* Variables end */
 
 html {
     scroll-behavior: smooth;
+    
   }
   
 /* CSS Resets */
@@ -83,6 +85,7 @@ a {
 }
 li {
     justify-content: center;
+    list-style: none;
     font-size: min(4vw, 16px);
     font-weight: var(--normal-font);
     color: var(--primary-color);
@@ -116,6 +119,11 @@ button {
 }
 .margin2 {
     margin-bottom:var(--bottom-margin-2);
+}
+.flash {
+    font-size: min(4vw, 16px);
+    margin:12px;
+    color: var(--primary-color);
 }
 
 /* Header */
@@ -295,7 +303,7 @@ button {
     cursor: pointer;
     box-shadow:var(--secondary-shadow);
 }
-    .button2:hover, .button2:active, .out_button:hover, .out_button:active {
+    .button2:hover, .button2:active, .out_button:hover, .out_button:active, .footer_link:hover, .footer_link:active {
         transform: var(--transform);
         opacity: 1;
         transition: var(--transition);
@@ -309,11 +317,29 @@ button {
     flex-flow: column wrap;
     align-content: center;
     padding:16px;
+    
 }
 
-.footer_contain {
-    display: flex;
-    justify-content: center;
+.footer {
+    display:flex;
+    justify-content:center;
+    bottom:0;
+    right:0;
+    padding-top:0px;
+    
+    
+}
+.footer_link {
+    padding: 16px;
+    margin-bottom:16px;
+    font-weight: var(--normal-font);
+    color: var(--primary-color);
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--secondary-color); 
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow:var(--secondary-shadow);
 }
 
 @media screen and (min-width: 600px) {
@@ -417,6 +443,14 @@ button {
             transform: var(--transform);
             transition: var(--transition);
         }
+    .footer {
+        position:fixed;
+        justify-content:flex-end;
+        box-shadow: none;
+    }
+    .footer_link {
+        margin-right:16px;
+    }
     
 }
 

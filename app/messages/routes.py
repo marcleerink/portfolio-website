@@ -46,6 +46,7 @@ def post_signup():
         new_user = User(name=name, email=email, password=generate_password_hash(password, method='sha256'))
         new_user.save()
         login_user(new_user)
+        flash('Sign up successful')
         return redirect(url_for('messages.get_contact'))
 
 
@@ -66,12 +67,14 @@ def post_login():
         flash ('Incorrect email or password, try again, ')
         return redirect(url_for('messages.get_login'))
     login_user(user)
+    flash('Log in successful')
     return redirect(url_for('messages.get_contact'))
 
 @blueprint.route('/log-out')
 @login_required
 def logout():
     logout_user()
+    flash('Log out successful')
     return redirect(url_for('simple_pages.index'))
 
 @blueprint.route('/profile')
@@ -108,21 +111,23 @@ def post_contact():
             server.login(MY_EMAIL, MY_EMAIL_PW)
             server.sendmail(MY_EMAIL, MY_EMAIL, current_user.email + subject + message)
             flash('Message sent!')
-            return render_template('messages/contact_form.html', name = current_user.name, email = current_user.email)
+            return redirect(url_for('messages.profile'))
         except smtplib.SMTPException:
             flash('Unable to send mail')
-            return render_template('messages/contact_form.html', name = current_user.name, email = current_user.email)
+            return redirect(url_for('messages.profile'))
 
 @blueprint.route('/delete/<int:user_id>')
 @login_required
 def delete_user(user_id):
     user_to_delete = User.query.get_or_404(user_id)
     messages_user_delete = Message.query.filter_by(user_id=current_user.id).first()
-
+    
+    # check if user has messages in database and delete together with user
     try:
+        if messages_user_delete != None:
+            messages_user_delete.delete()
         user_to_delete.delete()
-        messages_user_delete.delete()
-        flash("User and all messages deleted") 
+        flash("User deleted") 
         return redirect(url_for('simple_pages.index'))
 
     except:

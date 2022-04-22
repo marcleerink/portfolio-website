@@ -37,6 +37,7 @@
 .project_title {
     margin-bottom:16px;
 }
+
 .out_links {
     display: flex; 
 
@@ -65,7 +66,10 @@
         justify-items: center;
         flex-flow: row nowrap;
         align-items: stretch;
-        margin: var(--bottom-margin);
+        width:100%;
+        padding-left:30px;
+        padding-right:30px;
+        margin-bottom:16px;
     
 
 
@@ -73,7 +77,7 @@
     .project_contain {
         display:flex;
         justify-content: center;
-        flex-basis:33%;
+        flex-basis:40%;
         justify-self: center;
         align-items: space-between;
         align-content:space-between;
@@ -115,11 +119,12 @@
             transition: var(--transition);
         }
     .project_image {
-
         height:150px;
-        object-fit: cover;
+        width:100%;
+        object-fit: contain;
         border-radius: 10px;
         margin-bottom: 12px;
+        
 
     }
     .projects {

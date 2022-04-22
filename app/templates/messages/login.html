@@ -22,7 +22,7 @@
             {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                  <li class="button3">{{ message }} No account yet?<br><br>
+                  <li class="button3 flash">{{ message }} No account yet?<br><br>
                     <a href="{{ url_for('messages.get_signup') }}">Sign Up</a></li>
         
                 {% endfor %}
@@ -45,6 +45,6 @@
 </section>  
     <div class="links">
         <a class= "button2" href={{url_for('messages.get_signup')}}>Sign Up</a>
-        <a class= "button2" href={{url_for('simple_pages.index')}}>Overview</a>
+        <a class= "button2" id="hide" href={{url_for('simple_pages.index')}}>Overview</a>
     </div>
   {% endblock %}

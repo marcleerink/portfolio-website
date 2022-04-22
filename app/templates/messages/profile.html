@@ -24,7 +24,9 @@
             {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                  <li>{{ message }} </li>
+                <ul>
+                      <li class="flash">{{ message }} </li>
+                </ul>
                 {% endfor %}
               {% endif %}
             {% endwith %}
@@ -33,20 +35,20 @@
             <li> Sent at: {{ message.timestamp }}</li> 
             <li> Subject: {{ message.subject }}</li> 
             <li> Message: {{ message.message }}</li>
-            <li><a class= "profile_button" href="{{ url_for('messages.delete_message', message_id=message.id) }}">Delete Message</a></li>
+            <li><a class= "profile_button" href="{{ url_for('messages.delete_message', message_id=message.id) }}"><i class="fa-solid fa-trash-can"></i></a></li>
             </div>
             {% endfor %}
-            <li><a class= "button2 profile_button" href="{{ url_for('messages.delete_user', user_id=user.id) }}">Delete Account</a></li>
         </ul>
     </div>
 </section>
 <div class="profile_link">
+    <a class= "button2 profile_button" href="{{ url_for('messages.delete_user', user_id=user.id) }}">Delete Account</a>
     <a class= "button2 profile_button" href={{url_for('messages.get_contact')}}>Contact</a>
 </div>
 <section class="links">
     {% if current_user.is_authenticated %}
-    <a class= "button2" href={{ url_for('messages.logout') }}>Log Out</a>
+    <a class= "button2" id="hide" href={{ url_for('messages.logout') }}>Log Out</a>
     {% endif %}
-    <a class= "button2" href={{url_for('simple_pages.index')}}>Overview</a>
+    <a class= "button2" id="hide" href={{url_for('simple_pages.index')}}>Overview</a>
 </section>
 {% endblock %}

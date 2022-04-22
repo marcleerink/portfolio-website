@@ -8,7 +8,9 @@
 <nav class="navbar" id="navbar">
     <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
     <a class= "nav_button" href={{url_for('software_engineer.software_engineer')}}>Software Engineer</a>
-    <a class= "nav_button" href={{url_for('messages.get_contact')}}>Contact</a>
+    {% if current_user.is_authenticated == False %}
+    <a class= "nav_button" href={{url_for('messages.get_login')}}>Log In</a>
+    {% endif %}
     {% if current_user.is_authenticated %}
     <a class= "nav_button" href={{url_for('messages.logout')}}>Log Out</a>
     {% endif %}
@@ -40,7 +42,6 @@
         <a tabindex="0"class="out_button" onclick=" window.open('https://bandcamp.com/maleerink','_blank')"><i class="fa-brands fa-bandcamp"></i></a>
     </div>
     <div class="links">
-        <a class= "button2" href={{url_for('messages.get_contact')}}>Contact</a>
         <a class= "button2" href={{url_for('simple_pages.index')}}>Overview</a>
     </div>
 </section>

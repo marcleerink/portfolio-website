@@ -7,7 +7,9 @@
 <nav class="navbar" id="navbar">
     <a class= "nav_button" href={{url_for('simple_pages.index')}}>Overview</a>
     <a class= "nav_button" href={{url_for('simple_pages.sound_artist')}}>Sound</a>
-    <a class= "nav_button" href={{url_for('messages.get_contact')}}>Contact</a>
+    {% if current_user.is_authenticated == False %}
+    <a class= "nav_button" href={{url_for('messages.get_login')}}>Log In</a>
+    {% endif %}
     {% if current_user.is_authenticated %}
     <a class= "nav_button" href={{url_for('messages.logout')}}>Log Out</a>
     {% endif %}
@@ -54,7 +56,7 @@
         </div> 
         {% endfor %}
     </section>
-    <section class="links_wrap">
+    <section class="links_wrap"> 
         <div class="projects">
         <a class="button2" id="projects" href={{url_for('software_engineer.project')}}> All Projects</a>
         </div>
@@ -65,7 +67,6 @@
         </div>  
         <div class="links">
             <a class= "button2" href={{url_for('software_engineer.project')}}> Projects</a>
-            <a class= "button2" href={{url_for('messages.get_contact')}}>Contact</a>
             <a class= "button2" href={{url_for('simple_pages.index')}}>Overview</a>
         </div>
     </section>
