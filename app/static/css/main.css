@@ -9,9 +9,10 @@
   --normal-font: 400;
   --bold-font: 500;
   --bolder-font: 700;
-  --bg-color: rgb(252, 255, 249);
-  --primary-color: #282828;
-  --secondary-color: rgb(252, 254, 222);
+  --bg-color: rgb(251, 251, 251);
+  --primary-color: rgb(21, 21, 21);
+  --secondary-color: rgb(252, 255, 216);
+  --third-color: rgb(253, 255, 220);
   --primary-shadow: rgba(93, 93, 50, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   --secondary-shadow: rgba(92, 93, 50, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   --third-shadow:rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -21,7 +22,6 @@
   --transition: all 500ms ease-out;
   --transform: scale(1.05)
 }
-/* rgb(255, 243, 212); */
 
 /* Variables end */
 
@@ -124,6 +124,7 @@ button {
     font-size: min(4vw, 16px);
     margin:12px;
     color: var(--primary-color);
+    font-weight: bold
 }
 
 /* Header */
@@ -331,6 +332,7 @@ button {
     
 }
 .footer_link {
+    font-size:1.5em;
     padding: 16px;
     margin-bottom:16px;
     font-weight: var(--normal-font);
@@ -341,7 +343,7 @@ button {
     border-radius: 20px;
     cursor: pointer;
     box-shadow:var(--secondary-shadow);
-    flex-basis:25%;
+    flex-basis:50%;
 }
 
 @media screen and (min-width: 600px) {

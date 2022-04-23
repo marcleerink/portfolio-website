@@ -36,20 +36,20 @@ input,textarea {
     font-family: var(--font-family);
     font-size: min(4vw, 20px);
     width:80vw;
-    box-sizing: border-box;
+    height:40px;
     border: solid 1px var(--primary-color);
     text-align: center;
 }
 
 input:focus,textarea:focus {
     border-color: var(--primary-color);
+    text-align: center;
 }
 
 textarea {
-    font-family: var(--font-family);
-    vertical-align: top;
-    height: 5em;
+    height: 5em;;
     text-align: center;
+    
 }
     button:active, button:hover {
         transform: var(--transform);

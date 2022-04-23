@@ -62,11 +62,11 @@
     }
     .projects_container{
         display:flex;
-        justify-content: space-around;
+        justify-content: center;
         justify-items: center;
         flex-flow: row nowrap;
         align-items: stretch;
-        width:100%;
+        gap:10%;
         padding-left:30px;
         padding-right:30px;
         margin-bottom:16px;

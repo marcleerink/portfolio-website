@@ -14,18 +14,17 @@
     {% endif %}
 </nav>
 {% endblock %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+      <li class="flash">{{ message }}</li>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
 {% block body %}
 <section class="body form_wrap">
     <form action="/contact" class="form" method="post" autocomplete="on">
         <ul>
-            {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                  <li class="flash">{{ message }}</li>
-                {% endfor %}
-              {% endif %}
-            {% endwith %}
-
             <h2> Hi there, {{ name }}</h2>
             <li><br>Please write me a message and I will get back to you</li>
             <li>Your Email: {{ email }}</li>
@@ -40,8 +39,8 @@
                   </datalist>
             </li>
             <li>
-                <textarea id="message" name="message" placeholder="Message" value="{{
-                    request.form.message }}"required>
+                <textarea class=textarea id="message" name="message" placeholder="Message" value="{{
+                    request.form.message }}" required>
                 </textarea>
             </li>
             <li >

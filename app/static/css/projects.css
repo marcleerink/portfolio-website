@@ -85,8 +85,8 @@
 @media (min-width: 900px) {
     .projects_container{
         justify-content: space-between;
-        margin-left: 66px;
-        margin-right: 66px;
+        margin-left: 74px;
+        margin-right: 74px;
     }
     .project_contain {
         flex-basis: 45%;

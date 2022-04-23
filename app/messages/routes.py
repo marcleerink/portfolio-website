@@ -8,6 +8,7 @@ from app.config import MAIL_PORT, MAIL_SERVER, MY_EMAIL, MY_EMAIL_PW
 
 blueprint = Blueprint('messages', __name__)
 
+# Authorization pages
 @blueprint.get('/sign-up')
 def get_signup():
     return render_template('messages/signup.html')
@@ -61,7 +62,7 @@ def post_login():
     password = request.form.get('password')
     
     #check if user exists
-    #compare passwords with database
+    #compare passwords with database and hash it
     user = User.query.filter_by(email=email).first()
     if not user or not check_password_hash(user.password, password):
         flash ('Incorrect email or password, try again, ')
@@ -77,6 +78,7 @@ def logout():
     flash('Log out successful')
     return redirect(url_for('simple_pages.index'))
 
+# User Pages
 @blueprint.route('/profile')
 @login_required
 def profile():
@@ -116,9 +118,11 @@ def post_contact():
             flash('Unable to send mail')
             return redirect(url_for('messages.profile'))
 
+
 @blueprint.route('/delete/<int:user_id>')
 @login_required
 def delete_user(user_id):
+    # validate that user can only delete own account
     if user_id == current_user.id:
         user_to_delete = User.query.get_or_404(user_id)
         messages_user_delete = Message.query.filter_by(user_id=current_user.id).first()
@@ -143,6 +147,8 @@ def delete_user(user_id):
 def delete_message(message_id):
     user_id = current_user.id
     message_to_delete = Message.query.get_or_404(message_id)
+
+    # validate that user can only delete own messages
     if user_id == message_to_delete.user_id: 
         try:
             message_to_delete.delete()
