@@ -43,7 +43,7 @@ def post_signup():
         flash('Email already exists. Do you have an account already?')
         return redirect(url_for('messages.get_signup'))
     else:
-        # create user
+        # create and login user
         new_user = User(name=name, email=email, password=generate_password_hash(password, method='sha256'))
         new_user.save()
         login_user(new_user)
@@ -67,6 +67,8 @@ def post_login():
     if not user or not check_password_hash(user.password, password):
         flash ('Incorrect email or password, try again, ')
         return redirect(url_for('messages.get_login'))
+    
+    # login user
     login_user(user)
     flash('Log in successful')
     return redirect(url_for('messages.get_contact'))
@@ -85,7 +87,6 @@ def profile():
     messages = Message.query.filter_by(user_id= current_user.id).all()
     return render_template('messages/profile.html', name = current_user.name, email = current_user.email, messages = messages, user = current_user)
 
-
 @blueprint.get('/contact')
 @login_required
 def get_contact():
@@ -98,7 +99,7 @@ def post_contact():
     message = request.form.get('message')
     user_id = current_user.id
 
-    #check if input isn't to long
+    # validate input lenght for database record/security 
     if len(subject) > 119 or len(message) > 4999:
         flash ('Input to long')
     else:
@@ -106,7 +107,7 @@ def post_contact():
         new_message = Message(subject=subject, message=message, user_id = user_id)
         new_message.save()
 
-        # Send message to my email
+        # Sending message to admins email
         try: 
             server = smtplib.SMTP(MAIL_SERVER, MAIL_PORT)
             server.starttls()

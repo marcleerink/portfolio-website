@@ -42,7 +42,7 @@
     - Delete user account
 - Responsive design
 
-### App Architecture
+### App Architecture Diagram
 <p align="center">
     <img src="app/static/images/flask_app_flow_diagram.png" alt="Logo">
   </a>
