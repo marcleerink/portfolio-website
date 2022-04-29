@@ -4,7 +4,7 @@
   <a href="https://github.com/marcleerink/portfolio_website">
     <img src="app/static/images/portfolio_website_screenshot.png" alt="Logo">
   </a>
-
+</p>
   <h3 align="center">Portfolio Website</h3>
 
   <p align="center">
@@ -26,7 +26,7 @@
         - Projects
     - Sound
         - Projects
-    - Contact
+    - Log In
         - Sign up
         - Log In
         - Profile
@@ -34,14 +34,22 @@
 ### Features
 - Session based authentication
     - Register
-    - Login
+    - Log In
 - Messaging
     - Send message
     - View sent messages
+    - Delete sent messages
+    - Delete user account
 - Responsive design
 
+### App Architecture
+<p align="center">
+    <img src="app/static/images/flask_app_flow_diagram.png" alt="Logo">
+  </a>
+</p>
+
 ### To do
-- Implement jukebox with own music productions
+- Add music productions
 ### Built With
 
 - Python/Flask
@@ -68,7 +76,7 @@
    
    Linux/MacOS:
    ```sh
-   venv/bin/activate
+   source venv/bin/activate
    ```
    Powershell:
    ```sh
