@@ -43,7 +43,7 @@
         {% for project in project_pagination.items %}
         <div class ="project_contain"> 
             <div class="project_content">
-            <a href="/projects/{{ project.slug }}">
+            <a href="/projects/{{ project.slug }}"> 
                 <h2 class="project_title">{{ project.title }}</h2>
                 <img class="project_image" src='{{ project.image_url }}' alt="project_photo">
                 <p class="text_align_left">{{ project.content }}</p>
